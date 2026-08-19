@@ -26,7 +26,7 @@ BOARD_HEADER_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 INJECTION_TH_RE = re.compile(
-    r'<TH\b(?=[^>]*\bcolSpan\s*=\s*["\']?8["\']?)[^>]*>',
+    r'<TH\b(?=[^>]*\bcolSpan\s*=\s*["\']?\d+["\']?)[^>]*>',
     re.IGNORECASE,
 )
 EXISTING_INJECTION_RE = re.compile(

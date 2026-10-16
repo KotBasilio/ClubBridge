@@ -78,6 +78,22 @@ CHARSET_CODEPAGES = {
     238: "cp1250",
 }
 
+# Compatibility mappings for Adobe Symbol glyphs found in the source files.
+# Code 190 is a private-use horizontal arrow extender; a box-drawing line is
+# used so the constructed arrow remains visible in ordinary Markdown fonts.
+SYMBOL_CHARACTERS = {
+    167: "♣",
+    168: "♦",
+    169: "♥",
+    170: "♠",
+    174: "→",
+    182: "∂",
+    183: "•",
+    190: "─",
+    197: "⊕",
+    222: "⇒",
+}
+
 SPECIAL_CHARS = {
     "bullet": "•",
     "emdash": "—",
@@ -150,8 +166,47 @@ def _font_charsets(source: str) -> dict[int, int]:
     }
 
 
-def _decode_hex_byte(value: str, codepage: str) -> str:
-    raw = bytes([int(value, 16)])
+def _font_names(source: str) -> dict[int, str]:
+    start = source.find("{\\fonttbl")
+    if start < 0:
+        return {}
+
+    depth = 0
+    end = len(source)
+    for index in range(start, len(source)):
+        if source[index] == "{" and (index == 0 or source[index - 1] != "\\"):
+            depth += 1
+        elif source[index] == "}" and (index == 0 or source[index - 1] != "\\"):
+            depth -= 1
+            if depth == 0:
+                end = index + 1
+                break
+
+    font_table = source[start:end]
+    names: dict[int, str] = {}
+    matches = list(re.finditer(r"{\\f(\d+)", font_table))
+    for match in matches:
+        entry_end = font_table.find(";", match.end())
+        if entry_end < 0:
+            continue
+        entry = font_table[match.end():entry_end]
+        while re.search(r"{[^{}]*}", entry):
+            entry = re.sub(r"{[^{}]*}", "", entry)
+        entry = re.sub(r"\\[A-Za-z]+-?\d* ?", "", entry).strip()
+        if entry:
+            names[int(match.group(1))] = entry
+    return names
+
+
+def _decode_symbol(number: int) -> str:
+    return SYMBOL_CHARACTERS.get(number, f"⟦SYMBOL {number}⟧")
+
+
+def _decode_hex_byte(value: str, codepage: str, font_name: str = "") -> str:
+    number = int(value, 16)
+    if font_name.casefold() == "symbol":
+        return _decode_symbol(number)
+    raw = bytes([number])
     try:
         return raw.decode(codepage)
     except (LookupError, UnicodeDecodeError):
@@ -159,7 +214,7 @@ def _decode_hex_byte(value: str, codepage: str) -> str:
 
 
 def _normalized_text(chars: Iterable[str]) -> str:
-    text = "".join(chars).replace("\xa0", " ")
+    text = "".join(chars).replace("\xa0", " ").replace("\ufeff", "")
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r" *\n *", "\n", text)
     return text.strip()
@@ -177,6 +232,7 @@ def parse_rtf_bytes(data: bytes, source_name: str = "<memory>") -> DocumentInven
     source = data.decode("latin1")
     document_codepage = _document_codepage(source)
     font_charsets = _font_charsets(source)
+    font_names = _font_names(source)
 
     state = ParserState()
     stack: list[ParserState] = []
@@ -258,7 +314,11 @@ def parse_rtf_bytes(data: bytes, source_name: str = "<memory>") -> DocumentInven
         if symbol == "'" and i + 2 < len(source):
             charset = font_charsets.get(state.font if state.font is not None else -1)
             codepage = CHARSET_CODEPAGES.get(charset, document_codepage)
-            append(_decode_hex_byte(source[i + 1 : i + 3], codepage), token_start)
+            font_name = font_names.get(state.font if state.font is not None else -1, "")
+            append(
+                _decode_hex_byte(source[i + 1 : i + 3], codepage, font_name),
+                token_start,
+            )
             i += 3
             continue
         if not symbol.isalpha():
@@ -287,6 +347,10 @@ def parse_rtf_bytes(data: bytes, source_name: str = "<memory>") -> DocumentInven
         if i < len(source) and source[i] == " ":
             i += 1
 
+        if state.pending_destination and word == "fldinst":
+            symbol_field = re.match(r"SYMBOL\s+(\d+)\b", source[i:])
+            if symbol_field:
+                append(_decode_symbol(int(symbol_field.group(1))), token_start, fallback=False)
         if state.pending_destination:
             state.ignored = True
             state.pending_destination = False

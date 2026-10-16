@@ -44,6 +44,25 @@ class RtfInventoryTest(unittest.TestCase):
         self.assertEqual(1, inventory.field_count)
         self.assertEqual(1, inventory.hyperlink_count)
 
+    def test_symbol_field_without_result_is_preserved(self):
+        inventory = self.parse(
+            r'{\rtf1\ansi 3{\field{\*\fldinst SYMBOL 169 \\f "Symbol" \\s 10}{\fldrslt\f3\fs20}}/\u9824?\par}'
+        )
+
+        self.assertEqual("3♥/♠", inventory.paragraphs[0].text)
+
+    def test_symbol_font_hex_byte_uses_adobe_mapping(self):
+        inventory = self.parse(
+            r"{\rtf1\ansi{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f3\froman\fcharset2 Symbol;}}\f3\'de\par}"
+        )
+
+        self.assertEqual("⇒", inventory.paragraphs[0].text)
+
+    def test_formatting_bom_does_not_create_a_paragraph(self):
+        inventory = self.parse(r"{\rtf1\ansi\u-257?\par Visible\par}")
+
+        self.assertEqual(["Visible"], [item.text for item in inventory.paragraphs])
+
     def test_outline_page_region_table_and_offsets_are_recorded(self):
         inventory = self.parse(
             r"{\rtf1\ansi\pard\outlinelevel2 Heading\par\page\pard\intbl A\cell B\cell\row}"

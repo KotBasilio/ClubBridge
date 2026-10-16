@@ -11,6 +11,8 @@ The source material may teach us to change the approach.
 - fingerprints each source with SHA-256;
 - decodes font-specific character sets, including Word RTF whose document
   header says Windows-1252 while Russian runs use Windows-1251 fonts;
+- preserves the Adobe Symbol glyphs used for suits, arrows, and notation in
+  these sources, including `SYMBOL` fields with empty fallback results;
 - extracts paragraphs, outline headings, explicit page-break regions, tables,
   and source byte offsets;
 - reports fields, lists, bookmarks, hyperlinks, and embedded-object counts;
@@ -38,6 +40,11 @@ merged table cells, color meaning, or final Markdown note boundaries.
 
 See [source-assessment.md](source-assessment.md) for the first reproducible
 structural reading of the two documents and the proposed pilot areas.
+
+The generated pilot sections and their human-review checklist live in
+[`pilots/`](pilots/README.md). Build them with
+`tools/build_pilot_notes.py`; use its `--check` mode to detect drift from the
+current sources and extraction rules.
 
 ## Human Review
 

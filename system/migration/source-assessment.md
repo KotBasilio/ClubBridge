@@ -39,10 +39,10 @@ These are useful source roles, not an authority hierarchy. A disagreement must
 be preserved and recorded in
 [`pending-updates/conflicts.md`](pending-updates/conflicts.md).
 
-## Suggested Pilots
+## Pilot Selection
 
-Before attempting all 250–300 semantic notes, convert and verify a few
-deliberately different sections:
+Before attempting all 250–300 semantic notes, we selected three deliberately
+different sections:
 
 1. `«Косая система»` — prose, examples, and a small table;
 2. `Ответы на 1♣` — dense tables and internal cross-references;
@@ -51,6 +51,10 @@ deliberately different sections:
 Together they should expose whether the inventory contains enough evidence for
 safe note boundaries and cross-links. If not, change the tooling before bulk
 generation.
+
+The generated drafts, manifest, and review checklist now live under
+[`pilots/`](pilots/README.md). They remain migration artifacts pending human
+review; they are not yet authoritative notes.
 
 ## Known Review Risks
 

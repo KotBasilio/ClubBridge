@@ -1,0 +1,47 @@
+[
+  {
+    "title": "«Косая система»",
+    "output": "kosaya-sistema.md",
+    "source": "system/legacy/Articles_25_09.rtf",
+    "source_sha256": "8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054",
+    "source_heading": "«Косая система»",
+    "source_byte_start": 801848,
+    "source_byte_end": 913297,
+    "extracted_block_count": 77,
+    "heading_count": 5,
+    "table_region_count": 4,
+    "source_hyperlink_count": 4,
+    "source_navigation_marker_count": 2,
+    "generated_sha256": "a9072ea15edff966db99553221021a97c40f61d592a2bbe48a644c022a393f7d"
+  },
+  {
+    "title": "Ответы на 1♣",
+    "output": "otvety-na-1-trefu.md",
+    "source": "system/legacy/ns25_09.rtf",
+    "source_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+    "source_heading": "Ответы на 1♣",
+    "source_byte_start": 2014632,
+    "source_byte_end": 2630746,
+    "extracted_block_count": 365,
+    "heading_count": 15,
+    "table_region_count": 13,
+    "source_hyperlink_count": 21,
+    "source_navigation_marker_count": 7,
+    "generated_sha256": "ad00b96eeb818a599f724289fa295b3a73545c3df364ad978c8738e978437f98"
+  },
+  {
+    "title": "Шлемовая торговля",
+    "output": "shlemovaya-torgovlya.md",
+    "source": "system/legacy/ns25_09.rtf",
+    "source_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+    "source_heading": "Шлемовая торговля",
+    "source_byte_start": 1249020,
+    "source_byte_end": 1497376,
+    "extracted_block_count": 170,
+    "heading_count": 9,
+    "table_region_count": 2,
+    "source_hyperlink_count": 2,
+    "source_navigation_marker_count": 2,
+    "generated_sha256": "2146ff3a7853df2d45d646ee04cce4732af951ec27a4ac7d030f01abd18f289a"
+  }
+]

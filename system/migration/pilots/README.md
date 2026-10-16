@@ -11,10 +11,11 @@ human-maintained agreement notes. [`approved-manifest.json`](approved-manifest.j
 preserves their source ranges and generated hashes at approval;
 [`review.md`](review.md) preserves the completed checklist.
 
-## Active Review
+## Reviewed `Вист` Pair
 
-The paired `Вист` drafts live under [`vist/`](vist/README.md). They deliberately
-keep the two sources separate while we test cross-document comparison.
+The paired `Вист` drafts were reviewed and consolidated into
+[`../../agreements/vist.md`](../../agreements/vist.md). Their source manifests
+and completed review live under [`vist/`](vist/README.md).
 
 ## Reproducing a Source Baseline
 

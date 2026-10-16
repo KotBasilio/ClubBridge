@@ -28,3 +28,4 @@ The first reviewed notes are:
 - [`kosaya-sistema.md`](kosaya-sistema.md)
 - [`otvety-na-1-trefu.md`](otvety-na-1-trefu.md)
 - [`shlemovaya-torgovlya.md`](shlemovaya-torgovlya.md)
+- [`vist.md`](vist.md)

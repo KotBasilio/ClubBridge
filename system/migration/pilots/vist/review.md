@@ -1,16 +1,19 @@
-# `Вист` Pilot Review
+# `Вист` Pilot Review — Completed
+
+Archy reviewed and accepted both generated drafts on 2026-10-16. They were
+consolidated into [`../../../agreements/vist.md`](../../../agreements/vist.md).
 
 ## Mechanical Inventory
 
 | Draft | Source | Blocks | Headings | Table regions | Links |
 | --- | --- | ---: | ---: | ---: | ---: |
-| [`vist-articles.md`](vist-articles.md) | `Articles_25_09.rtf` | 91 | 6 | 0 | 0 |
-| [`vist-system-map.md`](vist-system-map.md) | `ns25_09.rtf` | 88 | 4 | 1 | 0 |
+| `vist-articles.md` | `Articles_25_09.rtf` | 91 | 6 | 0 | 0 |
+| `vist-system-map.md` | `ns25_09.rtf` | 88 | 4 | 1 | 0 |
 
 The source fingerprints, byte ranges, and generated hashes are in
-[`manifest.json`](manifest.json).
+[`approved-manifest.json`](approved-manifest.json).
 
-## Structural Reading
+## Structural Reading and Decision
 
 The two sections appear complementary rather than interchangeable:
 
@@ -22,37 +25,38 @@ The two sections appear complementary rather than interchangeable:
   clear cross-source contradiction has been identified yet; this is not a
   bridge-meaning verdict.
 
-The conservative initial shape is therefore two linked agreement notes. They
-can remain substantial notes with subsections. Split further only if review
-shows that a subsection needs to evolve independently or the notes become
-unwieldy.
+Archy confirmed that `“Flipping Kiev” explained` and `Лавинталь` describe the
+partnership's same suit-preference method. They were merged under the English
+heading `Flipping Odd Suit Preference`. The remaining material was combined
+without selecting either source as superior.
 
 ## Human Review Checklist
 
 For each draft:
 
-- [ ] Compare every paragraph with the corresponding rendered RTF section.
-- [ ] Confirm that headings begin and end at the intended semantic boundaries.
-- [ ] Confirm suits, arrows, smileys, check marks, and list markers.
-- [ ] Confirm that no formatting carried partnership meaning that Markdown lost.
-- [ ] Mark ambiguous or suspicious wording for review rather than correcting it.
+- [x] Compare every paragraph with the corresponding rendered RTF section.
+- [x] Confirm that headings begin and end at the intended semantic boundaries.
+- [x] Confirm suits, arrows, smileys, check marks, and list markers.
+- [x] Confirm that no formatting carried partnership meaning that Markdown lost.
+- [x] Mark ambiguous or suspicious wording for review rather than correcting it.
 
-For [`vist-system-map.md`](vist-system-map.md):
+For the generated `vist-system-map.md` input:
 
-- [ ] Reconstruct and verify the `Конвенционка` table against the rendered source.
+- [x] Reconstruct and verify the `Конвенционка` table against the rendered source.
 
 Across both drafts:
 
-- [ ] Check every overlap for an actual agreement, elaboration, or conflict.
-- [ ] If wording conflicts, add a ticket to
+- [x] Check every overlap for an actual agreement, elaboration, or conflict.
+- [x] If wording conflicts, add a ticket to
   [`../../pending-updates/conflicts.md`](../../pending-updates/conflicts.md);
   neither source wins automatically.
-- [ ] Decide whether the reviewed result should remain two linked notes or use
+- [x] Decide whether the reviewed result should remain two linked notes or use
   another semantic boundary.
 
 ## Review Outcome
 
-- Reviewer:
-- Date:
-- Result: pending
-- Notes:
+- Reviewer: Archy
+- Date: 2026-10-16
+- Result: accepted and promoted
+- Notes: consolidated into one substantial `Вист` note; the two overlapping
+  suit-preference sections were merged as `Flipping Odd Suit Preference`.

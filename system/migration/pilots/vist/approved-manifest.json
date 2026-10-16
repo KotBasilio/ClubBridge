@@ -2,6 +2,9 @@
   {
     "title": "Вист",
     "output": "vist-articles.md",
+    "promoted_to": "system/agreements/vist.md",
+    "reviewed_by": "Archy",
+    "reviewed_on": "2026-10-16",
     "source": "system/legacy/Articles_25_09.rtf",
     "source_sha256": "8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054",
     "source_heading": "Вист",
@@ -17,6 +20,9 @@
   {
     "title": "Вист",
     "output": "vist-system-map.md",
+    "promoted_to": "system/agreements/vist.md",
+    "reviewed_by": "Archy",
+    "reviewed_on": "2026-10-16",
     "source": "system/legacy/ns25_09.rtf",
     "source_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
     "source_heading": "Вист",

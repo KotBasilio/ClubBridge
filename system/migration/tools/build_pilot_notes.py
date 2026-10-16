@@ -78,6 +78,27 @@ PILOTS = (
         source_heading="Вист",
         output="vist-system-map.md",
     ),
+    PilotSpec(
+        key="soobrazheniya",
+        title="Соображения",
+        source="system/legacy/ns25_09.rtf",
+        source_heading="Соображения",
+        output="soobrazheniya.md",
+    ),
+    PilotSpec(
+        key="vkhody-articles",
+        title="Входы",
+        source="system/legacy/Articles_25_09.rtf",
+        source_heading="Входы",
+        output="vkhody-articles.md",
+    ),
+    PilotSpec(
+        key="hum-versiya",
+        title="HUM-версия",
+        source="system/legacy/Articles_25_09.rtf",
+        source_heading="HUM-версия",
+        output="hum-versiya.md",
+    ),
 )
 
 

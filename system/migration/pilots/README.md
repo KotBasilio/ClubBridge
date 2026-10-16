@@ -20,6 +20,12 @@ The paired `Вист` drafts were reviewed and consolidated into
 lives under [`vist/`](vist/README.md); their approval evidence is in the
 canonical manifest.
 
+## Active Review Queue
+
+The next three drafts are accumulating under
+[`review-queue/`](review-queue/README.md). They are deliberately left outside
+the approved agreements until human review.
+
 ## Reproducing a Source Baseline
 
 The builder requires an explicit output directory so it cannot overwrite an

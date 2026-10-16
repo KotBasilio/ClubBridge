@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Соображения",
+    "output": "soobrazheniya.md",
+    "source": "system/legacy/ns25_09.rtf",
+    "source_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+    "source_heading": "Соображения",
+    "source_byte_start": 1190668,
+    "source_byte_end": 1249020,
+    "extracted_block_count": 39,
+    "heading_count": 3,
+    "table_region_count": 2,
+    "source_hyperlink_count": 1,
+    "source_navigation_marker_count": 1,
+    "generated_sha256": "7d9188f294cf0b2d245758da3f95b6bc92ac2568036bb529e3c26946ae950a6a"
+  }
+]

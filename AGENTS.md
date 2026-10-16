@@ -29,6 +29,10 @@ architecture.
   a premature schema.
 - Keep original source documents unchanged under `system/legacy/` once they
   arrive.
+- Source documents have no automatic precedence over one another. Record any
+  disagreement in
+  [system/migration/pending-updates/conflicts.md](system/migration/pending-updates/conflicts.md)
+  for Archy and Nessy to resolve.
 - Keep changes small, traceable, reviewable, and semantically safe.
 - Do not turn a provisional migration approach into permanent policy before
   the source material has tested it.

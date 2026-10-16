@@ -41,6 +41,8 @@ merged table cells, color meaning, or final Markdown note boundaries.
 
 See [source-assessment.md](source-assessment.md) for the first reproducible
 structural reading of the two documents and the proposed pilot areas.
+The consolidated source-outline transition checklist is
+[`transition-plan.md`](transition-plan.md).
 
 Pilot sections and their review records live in [`pilots/`](pilots/README.md).
 Build source baselines with `tools/build_pilot_notes.py`, always supplying an

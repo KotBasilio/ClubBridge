@@ -400,7 +400,10 @@ def parse_rtf_bytes(data: bytes, source_name: str = "<memory>") -> DocumentInven
         elif word == "intbl":
             state.in_table = True
         elif word == "par":
-            flush(token_start)
+            if state.in_table:
+                append("<br>", token_start)
+            else:
+                flush(token_start)
         elif word == "line":
             append("\n", token_start)
         elif word == "tab":

@@ -11,7 +11,7 @@ source_byte_end: 1515522
 <!--
 Migration pilot: mechanically generated from the legacy RTF inventory.
 It is not yet an approved partnership-system note. Table regions are
-deliberately left as source-shaped text pending visual verification.
+rendered as Markdown tables; their geometry still needs visual verification.
 Internal source links retain their visible wording pending stable note targets.
 -->
 
@@ -78,12 +78,9 @@ Development principles:
 ▪ 1NT depends on RHO action:
 
 <!-- REVIEW: verify table geometry against the rendered RTF. -->
-```text
-1♣ – DBL/1♦♥♠ – pass – 1NT | 1♣ – DBL/1♦♥♠ – smt – 1NT |
-Not forcing and strong.
-Development as if opened 1NT. | A support without lead-directing.
-When we have a lead-directing support, we raise. |
-```
+|1♣ – DBL/1♦♥♠ – pass – 1NT | 1♣ – DBL/1♦♥♠ – smt – 1NT |
+|---|---|
+|Not forcing and strong. <br>Development as if opened 1NT. | A support without lead-directing. <br>When we have a lead-directing support, we raise. |
 
 Why is this legitimate?
 

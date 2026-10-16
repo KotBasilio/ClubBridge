@@ -11,7 +11,7 @@ source_byte_end: 1249020
 <!--
 Migration pilot: mechanically generated from the legacy RTF inventory.
 It is not yet an approved partnership-system note. Table regions are
-deliberately left as source-shaped text pending visual verification.
+rendered as Markdown tables; their geometry still needs visual verification.
 Internal source links retain their visible wording pending stable note targets.
 -->
 
@@ -24,29 +24,27 @@ Internal source links retain their visible wording pending stable note targets.
 Кандидаты на снос – места, которые не ходят, хотя добавлены более пары лет назад:
 
 <!-- REVIEW: verify table geometry against the rendered RTF. -->
-```text
-Тема | Когда было | Встречалось | Число сбоев |
-Выкинули Дельта-схему | 2012-2023 | 3 | 0 |
-Выкинули Low Minor | 2014-2020 | | |
+|Тема | Когда было | Встречалось | Число сбоев |
+|---|---|---|---|
+|Выкинули Дельта-схему | 2012-2023 | 3 | 0 |
+|Выкинули Low Minor | 2014-2020 | | |
 | | | |
-```
 
 Новшества:
 
 <!-- REVIEW: verify table geometry against the rendered RTF. -->
-```text
-Тема | Когда добавлено | Встречалось | Число сбоев |
-Ogust/Feature | 2017 июль | 2 | 1 |
-Отказанный Газилли | 2020 октябрь | 14 | 0 |
-Реконтра после блока | 2022 май | 0 | 0 |
-Ответ в кюбид | 2022 май | 0 | 0 |
-Натурализация отвротки | 2023 март | 20 | 1 |
-8-16 выяснение силы | 2023 октябрь | 10 | 0 |
-Входы на 1♦ пресиженскую | 2023 октябрь | 4 | 0 |
-Убрали пересчёты ступеней отвротки | 2024 ноябрь | | |
-Specific Kings | 2025 январь | | |
+|Тема | Когда добавлено | Встречалось | Число сбоев |
+|---|---|---|---|
+|Ogust/Feature | 2017 июль | 2 | 1 |
+|Отказанный Газилли | 2020 октябрь | 14 | 0 |
+|Реконтра после блока | 2022 май | 0 | 0 |
+|Ответ в кюбид | 2022 май | 0 | 0 |
+|Натурализация отвротки | 2023 март | 20 | 1 |
+|8-16 выяснение силы | 2023 октябрь | 10 | 0 |
+|Входы на 1♦ пресиженскую | 2023 октябрь | 4 | 0 |
+|Убрали пересчёты ступеней отвротки | 2024 ноябрь | | |
+|Specific Kings | 2025 январь | | |
 | | | |
-```
 
 ## Повторюшка
 

@@ -75,13 +75,15 @@ class BuildPilotNotesTest(unittest.TestCase):
         self.assertEqual(["Target", "Body", "Child"], [item.text for item in selected])
         self.assertEqual(4, end)
 
-    def test_render_marks_tables_and_source_navigation_without_inventing_shape(self):
+    def test_render_preserves_table_rows_as_markdown_and_marks_source_navigation(self):
         source = inventory(
             [
                 paragraph("Root", outline_level=0, source_start=10),
                 paragraph("Child", outline_level=2, source_start=20),
                 paragraph("A | B |", in_table=True, source_start=30),
-                paragraph("TOC", source_start=40),
+                paragraph("1 | |", in_table=True, source_start=40),
+                paragraph("| | |", in_table=True, source_start=50),
+                paragraph("TOC", source_start=60),
             ]
         )
         spec = build_pilot_notes.PilotSpec(
@@ -92,10 +94,10 @@ class BuildPilotNotesTest(unittest.TestCase):
             output="root.md",
         )
 
-        rendered = build_pilot_notes.render_note(spec, source, source.paragraphs, 50)
+        rendered = build_pilot_notes.render_note(spec, source, source.paragraphs, 70)
 
         self.assertIn("## Child", rendered)
-        self.assertIn("```text\nA | B |\n```", rendered)
+        self.assertIn("|A | B |\n|---|---|\n|1 | |\n| | |", rendered)
         self.assertIn("<!-- Source navigation marker: TOC -->", rendered)
 
 

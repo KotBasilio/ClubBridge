@@ -113,6 +113,15 @@ class RtfInventoryTest(unittest.TestCase):
             inventory.paragraphs[0].source_end,
         )
 
+    def test_paragraph_break_inside_table_cell_is_preserved_inside_its_row(self):
+        inventory = self.parse(
+            r"{\rtf1\ansi\pard\intbl A\par B\cell C\par D\cell\row}"
+        )
+
+        self.assertEqual(1, inventory.table_row_count)
+        self.assertEqual(["A<br>B | C<br>D |"], [item.text for item in inventory.paragraphs])
+        self.assertTrue(inventory.paragraphs[0].in_table)
+
     def test_inventory_writer_uses_utf8(self):
         inventory = self.parse(r"{\rtf1\ansi\uc1 \u9824?\par}")
         inventory.source = "sample.rtf"

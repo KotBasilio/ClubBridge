@@ -139,6 +139,20 @@ def table_region_count(paragraphs: list[Paragraph]) -> int:
     return count
 
 
+def markdown_table_cells(text: str) -> list[str]:
+    """Return cells from the inventory's pipe-delimited RTF table row."""
+    cells = text.split("|")
+    if cells and not cells[-1].strip():
+        cells.pop()
+    return cells
+
+
+def markdown_table_row(text: str) -> str:
+    if text.startswith("|"):
+        return text
+    return "|" + text
+
+
 def render_note(
     spec: PilotSpec,
     inventory: DocumentInventory,
@@ -171,7 +185,7 @@ def render_note(
         "<!--",
         "Migration pilot: mechanically generated from the legacy RTF inventory.",
         "It is not yet an approved partnership-system note. Table regions are",
-        "deliberately left as source-shaped text pending visual verification.",
+        "rendered as Markdown tables; their geometry still needs visual verification.",
         "Internal source links retain their visible wording pending stable note targets.",
         "-->",
         "",
@@ -179,43 +193,45 @@ def render_note(
         "",
     ]
 
-    in_table = False
+    table_column_count: int | None = None
     for paragraph in paragraphs[1:]:
         if paragraph.outline_level is not None:
-            if in_table:
-                lines.extend(["```", ""])
-                in_table = False
+            if table_column_count is not None:
+                lines.append("")
+                table_column_count = None
             level = markdown_levels[paragraph.outline_level]
             lines.extend([f"{'#' * level} {paragraph.text}", ""])
             continue
 
         if paragraph.text == "TOC":
-            if in_table:
-                lines.extend(["```", ""])
-                in_table = False
+            if table_column_count is not None:
+                lines.append("")
+                table_column_count = None
             lines.extend(["<!-- Source navigation marker: TOC -->", ""])
             continue
 
         if paragraph.in_table:
-            if not in_table:
+            if table_column_count is None:
+                table_column_count = len(markdown_table_cells(paragraph.text))
                 lines.extend(
                     [
                         "<!-- REVIEW: verify table geometry against the rendered RTF. -->",
-                        "```text",
+                        markdown_table_row(paragraph.text),
+                        "|" + "|".join("---" for _ in range(table_column_count)) + "|",
                     ]
                 )
-                in_table = True
-            lines.extend(paragraph.text.splitlines())
+            else:
+                lines.append(markdown_table_row(paragraph.text))
             continue
 
-        if in_table:
-            lines.extend(["```", ""])
-            in_table = False
+        if table_column_count is not None:
+            lines.append("")
+            table_column_count = None
         lines.extend(paragraph.text.splitlines())
         lines.append("")
 
-    if in_table:
-        lines.extend(["```", ""])
+    if table_column_count is not None:
+        lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 

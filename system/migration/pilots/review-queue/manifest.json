@@ -12,7 +12,7 @@
     "table_region_count": 2,
     "source_hyperlink_count": 1,
     "source_navigation_marker_count": 1,
-    "generated_sha256": "7d9188f294cf0b2d245758da3f95b6bc92ac2568036bb529e3c26946ae950a6a"
+    "generated_sha256": "a09b2ba62b270ec37076506a49816a7ebce2f1fdd21f539da0eb408a75034fcf"
   },
   {
     "title": "Входы",
@@ -22,12 +22,12 @@
     "source_heading": "Входы",
     "source_byte_start": 1437850,
     "source_byte_end": 1515522,
-    "extracted_block_count": 99,
+    "extracted_block_count": 97,
     "heading_count": 5,
     "table_region_count": 1,
     "source_hyperlink_count": 1,
     "source_navigation_marker_count": 0,
-    "generated_sha256": "670a5d42df2765502b4c52e681b81449c5c64321814955bd03f81b314745053e"
+    "generated_sha256": "45792ec9208ecbe0042b6f462a5d80d659b6d2fc01f7a1d230c656b4d4fccdf2"
   },
   {
     "title": "HUM-версия",
@@ -42,6 +42,6 @@
     "table_region_count": 0,
     "source_hyperlink_count": 1,
     "source_navigation_marker_count": 1,
-    "generated_sha256": "35db7544a9433a26b2c44557495ff99145d00043f4f4f840c5a7ce89c209ed24"
+    "generated_sha256": "416a16b3c15b969eded5305026cda62be1daca7d3b08729c8b8db0207bd24722"
   }
 ]

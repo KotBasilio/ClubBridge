@@ -11,7 +11,7 @@ source_byte_end: 1675948
 <!--
 Migration pilot: mechanically generated from the legacy RTF inventory.
 It is not yet an approved partnership-system note. Table regions are
-deliberately left as source-shaped text pending visual verification.
+rendered as Markdown tables; their geometry still needs visual verification.
 Internal source links retain their visible wording pending stable note targets.
 -->
 

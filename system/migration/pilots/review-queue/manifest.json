@@ -28,5 +28,20 @@
     "source_hyperlink_count": 1,
     "source_navigation_marker_count": 0,
     "generated_sha256": "670a5d42df2765502b4c52e681b81449c5c64321814955bd03f81b314745053e"
+  },
+  {
+    "title": "HUM-версия",
+    "output": "hum-versiya.md",
+    "source": "system/legacy/Articles_25_09.rtf",
+    "source_sha256": "8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054",
+    "source_heading": "HUM-версия",
+    "source_byte_start": 1586988,
+    "source_byte_end": 1675948,
+    "extracted_block_count": 86,
+    "heading_count": 5,
+    "table_region_count": 0,
+    "source_hyperlink_count": 1,
+    "source_navigation_marker_count": 1,
+    "generated_sha256": "35db7544a9433a26b2c44557495ff99145d00043f4f4f840c5a7ce89c209ed24"
   }
 ]

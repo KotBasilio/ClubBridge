@@ -58,6 +58,13 @@ class RtfInventoryTest(unittest.TestCase):
 
         self.assertEqual("⇒", inventory.paragraphs[0].text)
 
+    def test_symbol_degree_marker_uses_adobe_mapping(self):
+        inventory = self.parse(
+            r"{\rtf1\ansi{\fonttbl{\f0\fswiss Arial;}{\f3\froman\fcharset2 Symbol;}}\f3\'b0\par}"
+        )
+
+        self.assertEqual("°", inventory.paragraphs[0].text)
+
     def test_wingdings_symbol_field_uses_declared_font(self):
         inventory = self.parse(
             r'{\rtf1\ansi Smile {\field{\*\fldinst SYMBOL 74 \\f "Wingdings"}{\fldrslt}}\par}'

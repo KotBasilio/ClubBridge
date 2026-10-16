@@ -9,6 +9,8 @@ Nessy approve promotion.
 - [`vkhody-articles.md`](vkhody-articles.md) — `Входы` from
   `Articles_25_09.rtf`; it is distinct from the `ns25_09.rtf` section of the
   same name.
+- [`hum-versiya.md`](hum-versiya.md) — `HUM-версия` from
+  `Articles_25_09.rtf`.
 - [`review.md`](review.md) records the review state.
 - [`manifest.json`](manifest.json) records the generated baseline.
 
@@ -18,5 +20,6 @@ Rebuild a draft into this directory only while it is active review material:
 python3 system/migration/tools/build_pilot_notes.py \
   --output-dir system/migration/pilots/review-queue \
   --pilot soobrazheniya \
-  --pilot vkhody-articles
+  --pilot vkhody-articles \
+  --pilot hum-versiya
 ```

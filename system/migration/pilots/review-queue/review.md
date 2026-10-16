@@ -18,6 +18,11 @@ Source: `Articles_25_09.rtf > Входы`
 - [ ] Keep this section distinct from `ns25_09.rtf > Входы` pending comparison.
 - [ ] Promote, split, or flag ambiguity after human review.
 
-## Upcoming Drafts
+## `HUM-версия`
 
-- [ ] `HUM-версия` from `Articles_25_09.rtf`
+Source: `Articles_25_09.rtf > HUM-версия`
+
+- [ ] Compare the HUM opening rotation and all continuations with the rendered RTF.
+- [ ] Confirm the Adobe Symbol degree-sign list markers and source-navigation marker.
+- [ ] Confirm whether the four child headings should remain one note.
+- [ ] Promote, split, or flag ambiguity after human review.

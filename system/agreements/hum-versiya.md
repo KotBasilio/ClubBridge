@@ -1,19 +1,14 @@
 ---
 title: "HUM-версия"
-status: pilot-needs-human-review
+status: reviewed
+reviewed_by: Archy
+reviewed_on: 2026-10-16
 source: system/legacy/Articles_25_09.rtf
 source_heading: "HUM-версия"
 source_sha256: 8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054
 source_byte_start: 1586988
 source_byte_end: 1675948
 ---
-
-<!--
-Migration pilot: mechanically generated from the legacy RTF inventory.
-It is not yet an approved partnership-system note. Table regions are
-rendered as Markdown tables; their geometry still needs visual verification.
-Internal source links retain their visible wording pending stable note targets.
--->
 
 # HUM-версия
 
@@ -184,5 +179,3 @@ o выше – крешевая схема (скачки на их 1♣).
 Имеем дело с (квази)двуцветом, значит вся торговля оттуда: 2БК вопрос (min, min, max, max), 2♠ нефорс;
 
 3⊕ до длины; 3♥♠ - инвит и т.д.
-
-<!-- Source navigation marker: TOC -->

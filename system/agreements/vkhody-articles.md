@@ -1,19 +1,14 @@
 ---
 title: "Входы"
-status: pilot-needs-human-review
+status: reviewed
+reviewed_by: Archy
+reviewed_on: 2026-10-16
 source: system/legacy/Articles_25_09.rtf
 source_heading: "Входы"
 source_sha256: 8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054
 source_byte_start: 1437850
 source_byte_end: 1515522
 ---
-
-<!--
-Migration pilot: mechanically generated from the legacy RTF inventory.
-It is not yet an approved partnership-system note. Table regions are
-rendered as Markdown tables; their geometry still needs visual verification.
-Internal source links retain their visible wording pending stable note targets.
--->
 
 # Входы
 
@@ -77,7 +72,6 @@ Development principles:
 
 ▪ 1NT depends on RHO action:
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 |1♣ – DBL/1♦♥♠ – pass – 1NT | 1♣ – DBL/1♦♥♠ – smt – 1NT |
 |---|---|
 |Not forcing and strong. <br>Development as if opened 1NT. | A support without lead-directing. <br>When we have a lead-directing support, we raise. |

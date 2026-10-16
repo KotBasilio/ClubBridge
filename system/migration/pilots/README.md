@@ -20,11 +20,12 @@ The paired `Вист` drafts were reviewed and consolidated into
 lives under [`vist/`](vist/README.md); their approval evidence is in the
 canonical manifest.
 
-## Active Review Queue
+## Second Reviewed Batch
 
-The next three drafts are accumulating under
-[`review-queue/`](review-queue/README.md). They are deliberately left outside
-the approved agreements until human review.
+The next three drafts were reviewed and promoted on 2026-10-16. Their
+completed checklist is [`second-review.md`](second-review.md), and their source
+evidence is in the canonical manifest. A new review queue will be created when
+the next source-shaped batch is ready.
 
 ## Reproducing a Source Baseline
 

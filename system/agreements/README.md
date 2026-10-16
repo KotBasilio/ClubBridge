@@ -29,3 +29,8 @@ The first reviewed notes are:
 - [`otvety-na-1-trefu.md`](otvety-na-1-trefu.md)
 - [`shlemovaya-torgovlya.md`](shlemovaya-torgovlya.md)
 - [`vist.md`](vist.md)
+- [`soobrazheniya.md`](soobrazheniya.md)
+- [`vkhody-articles.md`](vkhody-articles.md) — the `Articles_25_09.rtf`
+  section, distinct from the still-unconverted `ns25_09.rtf` section of the
+  same name.
+- [`hum-versiya.md`](hum-versiya.md)

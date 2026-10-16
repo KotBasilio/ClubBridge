@@ -37,22 +37,22 @@ separate until human review determines their semantic relationship.
     - [ ] 6М4м мимо Газилли
     - [ ] Отказанный Газилли
   - [ ] Натурализация отвротки 2т
-- [ ] Входы
-  - [ ] Дозонные входы на 1тр
-  - [ ] Their strong club
-  - [ ] Позиция re-open
-  - [ ] Входы в сэндвиче
+- [x] Входы → [`../agreements/vkhody-articles.md`](../agreements/vkhody-articles.md)
+  - [x] Дозонные входы на 1тр
+  - [x] Their strong club
+  - [x] Позиция re-open
+  - [x] Входы в сэндвиче
 - [x] Вист → [`../agreements/vist.md`](../agreements/vist.md)
   - [x] “Flipping Kiev” explained → `Flipping Odd Suit Preference`
   - [x] Сброс картинки
   - [x] Механика счёта в Attitude
   - [x] Ходы Русинова
   - [x] Смит-энд-Вессон
-- [ ] HUM-версия
-  - [ ] Предпосылки
-  - [ ] Польская бубна
-  - [ ] Ответ 1♣ на ПАС
-  - [ ] Развитие 16-21
+- [x] HUM-версия → [`../agreements/hum-versiya.md`](../agreements/hum-versiya.md)
+  - [x] Предпосылки
+  - [x] Польская бубна
+  - [x] Ответ 1♣ на ПАС
+  - [x] Развитие 16-21
 - [ ] Реакция на помехи
   - [ ] На входы разные
     - [ ] Наши контры и траппинг-пас
@@ -93,9 +93,9 @@ separate until human review determines their semantic relationship.
 
 ## `ns25_09.rtf`
 
-- [ ] Соображения
-  - [ ] Эволюция
-  - [ ] Повторюшка
+- [x] Соображения → [`../agreements/soobrazheniya.md`](../agreements/soobrazheniya.md)
+  - [x] Эволюция
+  - [x] Повторюшка
 - [x] Шлемовая торговля → [`../agreements/shlemovaya-torgovlya.md`](../agreements/shlemovaya-torgovlya.md)
   - [x] Выбор схемы
   - [x] Прыжковая ШТ

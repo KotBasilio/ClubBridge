@@ -1,19 +1,14 @@
 ---
 title: "Соображения"
-status: pilot-needs-human-review
+status: reviewed
+reviewed_by: Archy
+reviewed_on: 2026-10-16
 source: system/legacy/ns25_09.rtf
 source_heading: "Соображения"
 source_sha256: 146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b
 source_byte_start: 1190668
 source_byte_end: 1249020
 ---
-
-<!--
-Migration pilot: mechanically generated from the legacy RTF inventory.
-It is not yet an approved partnership-system note. Table regions are
-rendered as Markdown tables; their geometry still needs visual verification.
-Internal source links retain their visible wording pending stable note targets.
--->
 
 # Соображения
 
@@ -23,7 +18,6 @@ Internal source links retain their visible wording pending stable note targets.
 
 Кандидаты на снос – места, которые не ходят, хотя добавлены более пары лет назад:
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 |Тема | Когда было | Встречалось | Число сбоев |
 |---|---|---|---|
 |Выкинули Дельта-схему | 2012-2023 | 3 | 0 |
@@ -32,7 +26,6 @@ Internal source links retain their visible wording pending stable note targets.
 
 Новшества:
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 |Тема | Когда добавлено | Встречалось | Число сбоев |
 |---|---|---|---|
 |Ogust/Feature | 2017 июль | 2 | 1 |
@@ -81,5 +74,3 @@ Internal source links retain their visible wording pending stable note targets.
 • Минорный Стейман (Барон)
 
 • «к козырной даме липнут короли»
-
-<!-- Source navigation marker: TOC -->

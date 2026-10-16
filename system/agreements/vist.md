@@ -58,21 +58,21 @@ sources:
 
 ## Flipping Odd Suit Preference
 
-The source notes also call this signal “Flipping Kiev”, «Киевский сигнал»,
-and «Лавинталь».
+☺ This is the defenders’ most fundamental interaction. In most deals, it is the earliest signal, given while following suit. The scale is: A Q 10 8 6 4 2 3 5 7 9 J K. Here, even cards signal the lower suit and odd cards signal the higher suit. A small card may mean nothing. But a card that is not small and is not forced is definitely a signal, with its own degree of strength. When a ruff is needed, it works the same way: Q or 10 asks for a return in the lower suit; J or 9, in the higher suit. We use this same signal on discards.
+
+Because this signal is tied to card rank, one can sometimes receive an awkward holding, such as 8643. There are plenty of small cards, but only one odd one—and it is the very smallest. So this holding makes it hard to signal the higher suit. We have a remedy for that, and we use it. The convention card says: “This applies to the first card in each suit; on the second play the signal is reversed; on the third, fourth, and later plays it returns to normal.” In the example, the first card is indeed the 3: “perhaps higher suit, perhaps no signal.” But the second card can be the 8 or the 6—sometimes you cannot afford the 8. That high even card is read on the reversed scale, and therefore says: “definitely higher suit.”
+
+An added benefit of the second paragraph is that the method handles cases where partner missed the first small card more gently. You may say: “Rare! And it is their own fault!” Yes, yes—but have you not seen this on long tournaments? Partner drifts off for a moment, then suddenly panics. They stare sadly at the second small card and struggle to remember the first. With the first-paragraph method, we cannot help: our second card is merely small—“the signal has already been given; remember it.” With the second-paragraph method, the second small card speaks too: “Wake up, friend—here is your information!”
 
 Let’s suppose for example that:
 
 • a player is in defense and has such hand:
-
+```
 s K975
-
 h 982
-
 d 975
-
 c 1084
-
+```
 • the player has a wish to signal his spade King.
 
 Then:
@@ -96,7 +96,6 @@ Mechanics of the signal with each holding:
 That’s why we flip the signal in the second card.
 
 This player’s actual play of cards can be the following:
-
 • h2, c4, d9, c10, c8, h8, h9, s5 …
 
 This sequence forms patterns:
@@ -107,13 +106,7 @@ This sequence forms patterns:
 
 ✓ In clubs: 4-10-8 – sure spade signal.
 
-The name of the signal refers to the native city of our bridge teacher, Petro Karlikov, many times champion of Ukraine.
-
-Самое основное взаимодействие вистующих ☺ В большинстве сдач это самый ранний сигнал, идущий при докладывании в масть. Шкала: Т Д 10 8 6 4 2 3 5 7 9 В К здесь чётные сигналят младшую масть, нечётные сигналят старшую масть. Мелкая карта может ничего не значить. Зато «не мелкая, невынужденная» карта – это точно сигнал, притом он обладает интенсивностью. При необходимости идти на убитку всё ровно так же: Д 10 — возврат в младшую масть, В 9 — в старшую. Этот же сигнал используем на сносах.
-
-Поскольку этот сигнал привязан к номиналу фосок, то иногда возникают ситуации, что тебе сдали нечто неудобное, например 8643. Здесь сдана куча фосок, вот только нечётная из них – лишь одна, и то – самая мелкая. Потому из этого набора затруднительно просигналить старшую масть. Против такой проблемы есть рецепт, и мы его используем. Вот цитата из конвенционки: «Так на 1й карте в масти; 2я наоборот; а 3я, 4я и т.д. – снова так». Применительно к примеру это означает, что первой картой действительно пойдёт 3ка «то ли в старшую, то ли нет сигнала», а вторая карта – 8ка или 6ка (мало ли когда 8ку нельзя себе позволить, в этом смысле). Эта крупная чётная идёт по шкале «наоброт», а значит «точно в старшую».
-
-Дополнительный бонус от второго абзаца – в том, что такой сигнал более мягко обрабатывает случаи, когда партнёр «проспал» первую фоску. Скажете: «Редкость! И сам виноват!». Да-да, я согласен, но разве вы не встречали эти ситуации на длинных турнирах? Когда партнёр замечтался, а потом заметался. Он грустно смотрит на вторую фоску и мучительно пытается вспомнить первую. И мы не можем ничем ему помочь при игре по первому абзацу, ибо 2й фоской от нас лежит просто мелкая: «сигнал уже был, вспоминай». При игре же со вторым абзацем 2я фоска тоже говорящая: «Проснись, дружище, вот твоя информация!».
+The name of the signal refers to the native city of our bridge teacher, Petro Karlikov, many times champion of Ukraine. Our source notes also call this signal “Flipping Kiev”, «Киевский сигнал».
 
 ## Сброс картинки
 

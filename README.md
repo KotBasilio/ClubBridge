@@ -1,5 +1,11 @@
 # ClubBridge
-Docs and theories. Bridge system I use with my partner.
-Also, software and tools for a bridge club.
--- Python script for injecting PBN boards into HTML;
--- etc.
+
+Living bridge partnership documentation, theory, and tools for a bridge club.
+
+## Repository Map
+
+- [`system/`](system/): Archy and Nessy's partnership bidding system.
+- [`BoardsInjector/`](BoardsInjector/): PBN-to-HTML board injection tool.
+- [`field/`](field/habitable-scaffolding.md): collaboration field and MV-M
+  scaffolding.
+- [`AGENTS.md`](AGENTS.md): repository guidance and semantic-safety rules.

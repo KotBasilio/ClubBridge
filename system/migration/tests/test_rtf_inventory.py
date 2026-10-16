@@ -79,6 +79,13 @@ class RtfInventoryTest(unittest.TestCase):
 
         self.assertEqual("➢", inventory.paragraphs[0].text)
 
+    def test_wingdings_square_list_marker_is_preserved(self):
+        inventory = self.parse(
+            r"{\rtf1\ansi{\fonttbl{\f0\fswiss Arial;}{\f10\fnil\fcharset2 Wingdings;}}\f10\'a7\par}"
+        )
+
+        self.assertEqual("▪", inventory.paragraphs[0].text)
+
     def test_formatting_bom_does_not_create_a_paragraph(self):
         inventory = self.parse(r"{\rtf1\ansi\u-257?\par Visible\par}")
 

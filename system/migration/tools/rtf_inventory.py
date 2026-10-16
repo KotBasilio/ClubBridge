@@ -99,6 +99,7 @@ SYMBOL_CHARACTERS = {
 # for review, not an invitation to guess at a replacement.
 WINGDINGS_CHARACTERS = {
     74: "☺",
+    167: "▪",
     216: "➢",
     252: "✓",
 }

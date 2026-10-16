@@ -13,5 +13,20 @@
     "source_hyperlink_count": 1,
     "source_navigation_marker_count": 1,
     "generated_sha256": "7d9188f294cf0b2d245758da3f95b6bc92ac2568036bb529e3c26946ae950a6a"
+  },
+  {
+    "title": "Входы",
+    "output": "vkhody-articles.md",
+    "source": "system/legacy/Articles_25_09.rtf",
+    "source_sha256": "8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054",
+    "source_heading": "Входы",
+    "source_byte_start": 1437850,
+    "source_byte_end": 1515522,
+    "extracted_block_count": 99,
+    "heading_count": 5,
+    "table_region_count": 1,
+    "source_hyperlink_count": 1,
+    "source_navigation_marker_count": 0,
+    "generated_sha256": "670a5d42df2765502b4c52e681b81449c5c64321814955bd03f81b314745053e"
   }
 ]

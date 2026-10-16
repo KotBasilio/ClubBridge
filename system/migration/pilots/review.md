@@ -56,4 +56,5 @@ semantic note paths do not exist.
 - Font weight, italics, color, indentation, and merged cells are not yet
   represented.
 - Approved notes are detached from mechanical regeneration. Their original
-  generated hashes remain in `approved-manifest.json` as migration evidence.
+  generated hashes remain in [`../approved-manifest.json`](../approved-manifest.json)
+  as migration evidence.

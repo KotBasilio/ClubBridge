@@ -45,7 +45,9 @@ structural reading of the two documents and the proposed pilot areas.
 Pilot sections and their review records live in [`pilots/`](pilots/README.md).
 Build source baselines with `tools/build_pilot_notes.py`, always supplying an
 explicit `--output-dir`. Approved notes are promoted to `system/agreements/`
-and deliberately detached from regeneration.
+and deliberately detached from regeneration. Their source ranges, generated
+hashes, and review records are collected in
+[`approved-manifest.json`](approved-manifest.json).
 
 ## Human Review
 

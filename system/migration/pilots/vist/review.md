@@ -11,7 +11,7 @@ consolidated into [`../../../agreements/vist.md`](../../../agreements/vist.md).
 | `vist-system-map.md` | `ns25_09.rtf` | 88 | 4 | 1 | 0 |
 
 The source fingerprints, byte ranges, and generated hashes are in
-[`approved-manifest.json`](approved-manifest.json).
+[`../../approved-manifest.json`](../../approved-manifest.json).
 
 ## Structural Reading and Decision
 

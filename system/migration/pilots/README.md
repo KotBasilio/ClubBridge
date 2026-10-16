@@ -7,15 +7,18 @@ them into [`../../agreements/`](../../agreements/README.md).
 ## Reviewed and Promoted
 
 Archy reviewed the first three pilots on 2026-10-16. They now live as ordinary,
-human-maintained agreement notes. [`approved-manifest.json`](approved-manifest.json)
-preserves their source ranges and generated hashes at approval;
+human-maintained agreement notes. The canonical
+[`../approved-manifest.json`](../approved-manifest.json) preserves each
+approved source range and generated hash; the entry's `review_record` points
+to its completed checklist.
 [`review.md`](review.md) preserves the completed checklist.
 
 ## Reviewed `Вист` Pair
 
 The paired `Вист` drafts were reviewed and consolidated into
-[`../../agreements/vist.md`](../../agreements/vist.md). Their source manifests
-and completed review live under [`vist/`](vist/README.md).
+[`../../agreements/vist.md`](../../agreements/vist.md). Their completed review
+lives under [`vist/`](vist/README.md); their approval evidence is in the
+canonical manifest.
 
 ## Reproducing a Source Baseline
 

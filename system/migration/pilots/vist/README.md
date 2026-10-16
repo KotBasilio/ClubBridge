@@ -10,8 +10,8 @@ sections `“Flipping Kiev” explained` and `Лавинталь` as
 source received precedence.
 
 - [`review.md`](review.md) records the completed review.
-- [`approved-manifest.json`](approved-manifest.json) preserves source ranges,
-  fingerprints, and hashes of both generated inputs.
+- [`../../approved-manifest.json`](../../approved-manifest.json) preserves the
+  source ranges, fingerprints, and hashes of both generated inputs.
 
 ## Reproduce the Generated Inputs
 

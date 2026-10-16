@@ -23,7 +23,7 @@ Nessy. Do not silently select, merge, modernize, or reconcile them.
 ### CONFLICT-001 — Non-vulnerable 1NT lower boundary
 
 - Status: open
-- Affected note: `system/migration/pilots/kosaya-sistema.md`
+- Affected note: `system/agreements/kosaya-sistema.md`
 - Source A: `Articles_25_09.rtf > Односторонка > «Косая система» > Зонозависимый БК`, heading starts at byte 826173
 - Source B: `Articles_25_09.rtf > Односторонка > «Косая система» > Границы силы открытий`, heading starts at byte 867485
 - Difference: Source A says that the non-vulnerable 1NT opening is 11–13; Source B describes 1NT as 10–13 when explaining the non-vulnerable 1♣ lower boundary.

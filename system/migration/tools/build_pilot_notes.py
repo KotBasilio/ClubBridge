@@ -14,11 +14,11 @@ from rtf_inventory import DocumentInventory, Paragraph, parse_rtf
 
 
 REPOSITORY_ROOT = Path(__file__).parents[3]
-DEFAULT_OUTPUT_DIR = REPOSITORY_ROOT / "system" / "migration" / "pilots"
 
 
 @dataclass(frozen=True)
 class PilotSpec:
+    key: str
     title: str
     source: str
     source_heading: str
@@ -44,22 +44,39 @@ class PilotManifestEntry:
 
 PILOTS = (
     PilotSpec(
+        key="kosaya-sistema",
         title="«Косая система»",
         source="system/legacy/Articles_25_09.rtf",
         source_heading="«Косая система»",
         output="kosaya-sistema.md",
     ),
     PilotSpec(
+        key="otvety-na-1-trefu",
         title="Ответы на 1♣",
         source="system/legacy/ns25_09.rtf",
         source_heading="Ответы на 1♣",
         output="otvety-na-1-trefu.md",
     ),
     PilotSpec(
+        key="shlemovaya-torgovlya",
         title="Шлемовая торговля",
         source="system/legacy/ns25_09.rtf",
         source_heading="Шлемовая торговля",
         output="shlemovaya-torgovlya.md",
+    ),
+    PilotSpec(
+        key="vist-articles",
+        title="Вист",
+        source="system/legacy/Articles_25_09.rtf",
+        source_heading="Вист",
+        output="vist-articles.md",
+    ),
+    PilotSpec(
+        key="vist-system-map",
+        title="Вист",
+        source="system/legacy/ns25_09.rtf",
+        source_heading="Вист",
+        output="vist-system-map.md",
     ),
 )
 
@@ -182,12 +199,14 @@ def render_note(
     return "\n".join(lines).rstrip() + "\n"
 
 
-def build_outputs(repository_root: Path) -> tuple[dict[Path, str], list[PilotManifestEntry]]:
+def build_outputs(
+    repository_root: Path, specs: tuple[PilotSpec, ...] = PILOTS
+) -> tuple[dict[Path, str], list[PilotManifestEntry]]:
     inventories: dict[str, DocumentInventory] = {}
     outputs: dict[Path, str] = {}
     manifest: list[PilotManifestEntry] = []
 
-    for spec in PILOTS:
+    for spec in specs:
         if spec.source not in inventories:
             inventories[spec.source] = parse_rtf(repository_root / spec.source)
         inventory = inventories[spec.source]
@@ -239,8 +258,14 @@ def build_argument_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=DEFAULT_OUTPUT_DIR,
-        help="pilot output directory",
+        required=True,
+        help="explicit pilot output directory; approved agreements are never overwritten",
+    )
+    parser.add_argument(
+        "--pilot",
+        action="append",
+        choices=[spec.key for spec in PILOTS],
+        help="pilot key to build; repeat as needed (default: all)",
     )
     parser.add_argument(
         "--check",
@@ -252,7 +277,9 @@ def build_argument_parser() -> argparse.ArgumentParser:
 
 def main() -> int:
     args = build_argument_parser().parse_args()
-    outputs, manifest = build_outputs(REPOSITORY_ROOT)
+    by_key = {spec.key: spec for spec in PILOTS}
+    specs = tuple(by_key[key] for key in args.pilot) if args.pilot else PILOTS
+    outputs, manifest = build_outputs(REPOSITORY_ROOT, specs)
 
     if args.check:
         failures = []

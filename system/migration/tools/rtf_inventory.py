@@ -94,6 +94,15 @@ SYMBOL_CHARACTERS = {
     222: "⇒",
 }
 
+# Compatibility mappings for the few Wingdings glyphs used by the sources.
+# Keep this deliberately narrow: an unknown decorative-font byte is evidence
+# for review, not an invitation to guess at a replacement.
+WINGDINGS_CHARACTERS = {
+    74: "☺",
+    216: "➢",
+    252: "✓",
+}
+
 SPECIAL_CHARS = {
     "bullet": "•",
     "emdash": "—",
@@ -198,14 +207,19 @@ def _font_names(source: str) -> dict[int, str]:
     return names
 
 
-def _decode_symbol(number: int) -> str:
+def _decode_font_symbol(number: int, font_name: str = "Symbol") -> str:
+    if font_name.casefold() == "wingdings":
+        return WINGDINGS_CHARACTERS.get(
+            number,
+            f"⟦WINGDINGS {number}⟧",
+        )
     return SYMBOL_CHARACTERS.get(number, f"⟦SYMBOL {number}⟧")
 
 
 def _decode_hex_byte(value: str, codepage: str, font_name: str = "") -> str:
     number = int(value, 16)
-    if font_name.casefold() == "symbol":
-        return _decode_symbol(number)
+    if font_name.casefold() in {"symbol", "wingdings"}:
+        return _decode_font_symbol(number, font_name)
     raw = bytes([number])
     try:
         return raw.decode(codepage)
@@ -348,9 +362,17 @@ def parse_rtf_bytes(data: bytes, source_name: str = "<memory>") -> DocumentInven
             i += 1
 
         if state.pending_destination and word == "fldinst":
-            symbol_field = re.match(r"SYMBOL\s+(\d+)\b", source[i:])
+            instruction_end = source.find("}", i)
+            instruction = source[i:instruction_end] if instruction_end >= 0 else source[i:]
+            symbol_field = re.match(r"SYMBOL\s+(\d+)\b", instruction)
             if symbol_field:
-                append(_decode_symbol(int(symbol_field.group(1))), token_start, fallback=False)
+                symbol_font = re.search(r'\\f\s+"([^"]+)"', instruction)
+                font_name = symbol_font.group(1) if symbol_font else "Symbol"
+                append(
+                    _decode_font_symbol(int(symbol_field.group(1)), font_name),
+                    token_start,
+                    fallback=False,
+                )
         if state.pending_destination:
             state.ignored = True
             state.pending_destination = False

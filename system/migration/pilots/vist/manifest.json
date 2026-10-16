@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Вист",
+    "output": "vist-articles.md",
+    "source": "system/legacy/Articles_25_09.rtf",
+    "source_sha256": "8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054",
+    "source_heading": "Вист",
+    "source_byte_start": 1515522,
+    "source_byte_end": 1586988,
+    "extracted_block_count": 91,
+    "heading_count": 6,
+    "table_region_count": 0,
+    "source_hyperlink_count": 0,
+    "source_navigation_marker_count": 0,
+    "generated_sha256": "e0823474517fd9c3ca12e252adfcb8621934621193e5d07dfdf6ff07fe492ee5"
+  },
+  {
+    "title": "Вист",
+    "output": "vist-system-map.md",
+    "source": "system/legacy/ns25_09.rtf",
+    "source_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+    "source_heading": "Вист",
+    "source_byte_start": 1497376,
+    "source_byte_end": 1618321,
+    "extracted_block_count": 88,
+    "heading_count": 4,
+    "table_region_count": 1,
+    "source_hyperlink_count": 0,
+    "source_navigation_marker_count": 0,
+    "generated_sha256": "6ee331009c335431be6bd364258491851894e8ded4eb54486208f2e6d3541dcb"
+  }
+]

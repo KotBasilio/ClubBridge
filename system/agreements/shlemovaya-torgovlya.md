@@ -1,19 +1,14 @@
 ---
 title: "Шлемовая торговля"
-status: pilot-needs-human-review
+status: reviewed
+reviewed_by: Archy
+reviewed_on: 2026-10-16
 source: system/legacy/ns25_09.rtf
 source_heading: "Шлемовая торговля"
 source_sha256: 146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b
 source_byte_start: 1249020
 source_byte_end: 1497376
 ---
-
-<!--
-Migration pilot: mechanically generated from the legacy RTF inventory.
-It is not yet an approved partnership-system note. Table regions are
-deliberately left as source-shaped text pending visual verification.
-Internal source links retain their visible wording pending stable note targets.
--->
 
 # Шлемовая торговля
 
@@ -153,8 +148,6 @@ For instance, it’s to their suit, or to the suit first bid by the future dummy
 
 Сказавший 5БК пусть отчётливо осознаёт, что его следующая заявка будет запасована.
 
-<!-- Source navigation marker: TOC -->
-
 ## Форспас
 
 Когда он есть? В целом, в неоговоренных местах нет форспаса. Вот оговоренные места:
@@ -191,7 +184,6 @@ When we re-open their part-score => we should be ready to double their game.
 
 • Форспас с ограниченной руки на неопределённую не вымогает контру. Вот такой:
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 ```text
 ограниченная рука | ФП
 ────→
@@ -254,7 +246,6 @@ o остальное как-нибудь.
 
 Конкретные примеры:
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 ```text
 1♣-1♥/♠-
 2БК-?? | Знаем: ОТКР показал руку 18+ строго с дублетом в мажоре ОТВ. К слову, при синглете в мажоре ОТВ, ОТКР рекоммендуется ребид либо 1♠, либо 2♣, но не 2БК. |
@@ -327,5 +318,3 @@ o All GF responses to normal openings; all «invitation+» bids from a non-passe
 o All game-forcing responses to weak openings. These have Flamingo=3.
 
 Skipping the 4NT bid requires some attention. As a priority, we want to avoid confusion of «less» with «more». Therefore we have only one bid to describe «less», that's 5 in the agreed suit. Other bids, ideally, would convey information of «more» and they also would show some next cuebid. But the second part cannot be established as a rule for the lack of bidding space. So, such skip-4NT bid can be something creative at times.
-
-<!-- Source navigation marker: TOC -->

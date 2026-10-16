@@ -2,6 +2,9 @@
   {
     "title": "«Косая система»",
     "output": "kosaya-sistema.md",
+    "promoted_to": "system/agreements/kosaya-sistema.md",
+    "reviewed_by": "Archy",
+    "reviewed_on": "2026-10-16",
     "source": "system/legacy/Articles_25_09.rtf",
     "source_sha256": "8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054",
     "source_heading": "«Косая система»",
@@ -17,6 +20,9 @@
   {
     "title": "Ответы на 1♣",
     "output": "otvety-na-1-trefu.md",
+    "promoted_to": "system/agreements/otvety-na-1-trefu.md",
+    "reviewed_by": "Archy",
+    "reviewed_on": "2026-10-16",
     "source": "system/legacy/ns25_09.rtf",
     "source_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
     "source_heading": "Ответы на 1♣",
@@ -32,6 +38,9 @@
   {
     "title": "Шлемовая торговля",
     "output": "shlemovaya-torgovlya.md",
+    "promoted_to": "system/agreements/shlemovaya-torgovlya.md",
+    "reviewed_by": "Archy",
+    "reviewed_on": "2026-10-16",
     "source": "system/legacy/ns25_09.rtf",
     "source_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
     "source_heading": "Шлемовая торговля",

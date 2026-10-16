@@ -1,24 +1,37 @@
 # Migration Pilots
 
-These files are mechanically generated review drafts, not yet approved
-partnership-system notes. They test three structurally different source
-sections before we choose final semantic boundaries or perform bulk migration.
+This directory records mechanically generated review drafts and their review
+state. Drafts are not partnership-system notes until human review promotes
+them into [`../../agreements/`](../../agreements/README.md).
 
-- [`kosaya-sistema.md`](kosaya-sistema.md) comes from `«Косая система»` in
-  `Articles_25_09.rtf`.
-- [`otvety-na-1-trefu.md`](otvety-na-1-trefu.md) comes from `Ответы на 1♣` in
-  `ns25_09.rtf`.
-- [`shlemovaya-torgovlya.md`](shlemovaya-torgovlya.md) comes from
-  `Шлемовая торговля` in `ns25_09.rtf`.
+## Reviewed and Promoted
 
-`manifest.json` records source hashes, byte ranges, structural counts, and
-generated-file hashes. Rebuild or verify the pilots from the repository root:
+Archy reviewed the first three pilots on 2026-10-16. They now live as ordinary,
+human-maintained agreement notes. [`approved-manifest.json`](approved-manifest.json)
+preserves their source ranges and generated hashes at approval;
+[`review.md`](review.md) preserves the completed checklist.
+
+## Active Review
+
+The paired `Вист` drafts live under [`vist/`](vist/README.md). They deliberately
+keep the two sources separate while we test cross-document comparison.
+
+## Reproducing a Source Baseline
+
+The builder requires an explicit output directory so it cannot overwrite an
+approved agreement accidentally. For example:
 
 ```sh
-python3 system/migration/tools/build_pilot_notes.py
-python3 system/migration/tools/build_pilot_notes.py --check
+python3 system/migration/tools/build_pilot_notes.py \
+  --output-dir /tmp/clubbridge-pilots \
+  --pilot kosaya-sistema
+
+python3 system/migration/tools/build_pilot_notes.py \
+  --output-dir /tmp/clubbridge-pilots \
+  --pilot kosaya-sistema \
+  --check
 ```
 
-Table regions remain in fenced source-shaped text and carry review markers.
-This avoids inventing cell geometry that the current extractor cannot prove.
-See [`review.md`](review.md) for the automated findings and human checklist.
+Generated baselines remain migration evidence. Once promoted, agreement notes
+are intentionally detached from regeneration and may evolve through normal,
+reviewable Markdown edits.

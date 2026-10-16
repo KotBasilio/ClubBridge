@@ -58,6 +58,27 @@ class RtfInventoryTest(unittest.TestCase):
 
         self.assertEqual("⇒", inventory.paragraphs[0].text)
 
+    def test_wingdings_symbol_field_uses_declared_font(self):
+        inventory = self.parse(
+            r'{\rtf1\ansi Smile {\field{\*\fldinst SYMBOL 74 \\f "Wingdings"}{\fldrslt}}\par}'
+        )
+
+        self.assertEqual("Smile ☺", inventory.paragraphs[0].text)
+
+    def test_wingdings_hex_byte_uses_compatibility_mapping(self):
+        inventory = self.parse(
+            r"{\rtf1\ansi{\fonttbl{\f0\fswiss Arial;}{\f10\fnil\fcharset2 Wingdings;}}\f10\'fc\par}"
+        )
+
+        self.assertEqual("✓", inventory.paragraphs[0].text)
+
+    def test_wingdings_arrowhead_list_marker_is_preserved(self):
+        inventory = self.parse(
+            r"{\rtf1\ansi{\fonttbl{\f0\fswiss Arial;}{\f10\fnil\fcharset2 Wingdings;}}\f10\'d8\par}"
+        )
+
+        self.assertEqual("➢", inventory.paragraphs[0].text)
+
     def test_formatting_bom_does_not_create_a_paragraph(self):
         inventory = self.parse(r"{\rtf1\ansi\u-257?\par Visible\par}")
 

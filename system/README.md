@@ -4,9 +4,10 @@ This directory is the home of Archy and Nessy's living bridge partnership
 system.
 
 The unchanged source RTF documents and their fingerprints live under
-[`legacy/`](legacy/README.md). Semantic Markdown notes belong under
-`agreements/`; provisional conversion or review material may use `migration/`
-without turning an initial method into permanent policy.
+[`legacy/`](legacy/README.md). Human-reviewed Markdown notes live under
+[`agreements/`](agreements/README.md); provisional conversion or review
+material may use `migration/` without turning an initial method into permanent
+policy.
 
 The source documents have no automatic precedence. Record disagreements in
 [migration/pending-updates/conflicts.md](migration/pending-updates/conflicts.md)

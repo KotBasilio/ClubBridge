@@ -52,9 +52,10 @@ Together they should expose whether the inventory contains enough evidence for
 safe note boundaries and cross-links. If not, change the tooling before bulk
 generation.
 
-The generated drafts, manifest, and review checklist now live under
-[`pilots/`](pilots/README.md). They remain migration artifacts pending human
-review; they are not yet authoritative notes.
+Archy reviewed and accepted the three drafts on 2026-10-16. Their reviewed
+working forms now live under [`../agreements/`](../agreements/README.md); the
+generated hashes and completed checklist remain under [`pilots/`](pilots/README.md)
+as migration evidence.
 
 ## Known Review Risks
 

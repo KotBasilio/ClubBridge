@@ -85,6 +85,7 @@ class BuildPilotNotesTest(unittest.TestCase):
             ]
         )
         spec = build_pilot_notes.PilotSpec(
+            key="root",
             title="Root",
             source="source.rtf",
             source_heading="Root",

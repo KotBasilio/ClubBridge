@@ -1,6 +1,8 @@
 ---
 title: "«Косая система»"
-status: pilot-needs-human-review
+status: reviewed
+reviewed_by: Archy
+reviewed_on: 2026-10-16
 source: system/legacy/Articles_25_09.rtf
 source_heading: "«Косая система»"
 source_sha256: 8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054
@@ -8,18 +10,10 @@ source_byte_start: 801848
 source_byte_end: 913297
 ---
 
-<!--
-Migration pilot: mechanically generated from the legacy RTF inventory.
-It is not yet an approved partnership-system note. Table regions are
-deliberately left as source-shaped text pending visual verification.
-Internal source links retain their visible wording pending stable note targets.
--->
-
 # «Косая система»
 
 Против этой системы неудобно играть. Особенно, когда мы до зоны. Стандартный уровень затруднений генерирует слабый БК, и ещё больше трудностей – 1М «8-17 от 5ки». Для начала, встречаются сдачи, когда на первой руке держим «KQxxx ххх Axxx x», а за нами 12HCP равномера, и первые три заявки в зале происходят «пас 1м(опп) пас ...». За нашим же столом случается лёгкое открытие: «1♠ пас 3♠ ...» – разница заметна.
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 ```text
 Короткая масть: | фит |
 | триплет | четвёрка |
@@ -54,7 +48,6 @@ Internal source links retain their visible wording pending stable note targets.
 
 ## Про узких быков
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 ```text
 нулевой бык | 11..13 | 1♣ слабая группа |
 один бык | 14..16 | 1бк открытие |
@@ -97,7 +90,6 @@ Internal source links retain their visible wording pending stable note targets.
 
 Практикуем очень свободный стиль c опорой на Zar-points – 26 дают открытие. В зоне 11 открываем сплошь и рядом, если есть хотя бы два контроля, и потерь не более 7,5. Напоминание: считаем MLTC, где туз закрывает полторы потери, король одну, дама – половинку или меньше. Примеры из практики:
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 ```text
 KQxxx ххх AQx x
 KQxxx Q KQxx ххх
@@ -124,8 +116,6 @@ o 1М-2♣-2♦-?? – тут отложенный фит покажет 13-14. 
 
 o 1♠-2♦-2♥-?? – тут хорошо, что есть трансферы. Трансфер в пику покажет 10+, а «форсгейм без мастей» настолько редкий, что вместо него спокойно можно ставить аналогичный отложенный фит 13-14.
 
-<!-- Source navigation marker: TOC -->
-
 ## Ogust/Feature
 
 Речь о развитии односторонней торговли, когда сначала оппы открылись 1тбч, и далее пасуют, а мы вошли 2М. Сконцентрируемся на вопросе 2БК. Смысл этого искусственного вопроса – в поиске гейма. В литературе встречается две схемы -- одна построена на показе расклада, называется Feature; другая схема описывает пукнты – Ogust.
@@ -136,7 +126,6 @@ o 1♠-2♦-2♥-?? – тут хорошо, что есть трансферы.
 
 Правило получается такое:
 
-<!-- REVIEW: verify table geometry against the rendered RTF. -->
 ```text
 О силе – при непасовавшем ОТВ, в трех зональностях;
 О синглетах – когда ОТВ пасовал или невыгодная зона. |
@@ -155,5 +144,3 @@ o 1♠-2♦-2♥-?? – тут хорошо, что есть трансферы.
 o в Малти – там тоже ОТКР дважды может тормозить;
 
 o в мажорах 2ч – там тоже средняя сила сложена во вторую ступень.
-
-<!-- Source navigation marker: TOC -->

@@ -442,6 +442,9 @@ Open [`index.html`](index.html) in a browser. It links to:
 3. [`case-3-ns-duplicate-collision.html`](case-3-ns-duplicate-collision.html) —
    the 2×2 duplicate collision with both possible pairings.
 
+In the canonical repository pack, Archy's completed judgments and the remaining
+unresolved collision are recorded in [`review.md`](review.md) for Iris review.
+
 For cases 1 and 2, report one choice from each line:
 
 - `Equivalent geometry / Different geometry / Uncertain`

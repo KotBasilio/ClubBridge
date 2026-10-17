@@ -59,3 +59,10 @@ generate approved notes, or rewrite the legacy sources.
 Review the report at
 `system/migration/pilots/rtf-html-matcher-report.md`, plus `AGENTS.md`.
 This is deliberately a small sample before reviewing all exceptions.
+
+## Human review response
+
+Archy's decisions and the raw-source clarification for the duplicate collision
+are recorded in [`visual-review/review.md`](visual-review/review.md). Cases 1
+and 2 were judged geometrically equivalent with the same bidding meaning. Case
+3 remains unresolved; no pairing override was approved.

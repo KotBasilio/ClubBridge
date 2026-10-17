@@ -39,6 +39,27 @@ authority. Explicit page-break regions are not guaranteed to equal rendered
 page numbers. The tool does not yet preserve visual layout, formatting spans,
 merged table cells, color meaning, or final Markdown note boundaries.
 
+## HTML Table Probe
+
+`tools/html_table_probe.py` inspects the Word-exported HTML companions without
+changing them. It reports physical and logical table geometry, conventional
+`rowspan`/`colspan` merges, nesting, malformed structures, encoding, and bridge
+suit-symbol counts. Optional JSON and clean HTML witnesses are written only
+when their output paths are supplied:
+
+```sh
+python3 system/migration/tools/html_table_probe.py \
+  --output /tmp/clubbridge-html-report.json \
+  --samples-dir /tmp/clubbridge-html-samples \
+  --sample-limit 13
+```
+
+The witnesses deliberately omit Word classes, styles, scripts, and other
+presentation baggage. They are diagnostic geometry evidence, not approved
+agreement text. See
+[`pilots/html-table-probe-report.md`](pilots/html-table-probe-report.md) for
+the validation findings and the proposed dual-source boundary.
+
 See [source-assessment.md](source-assessment.md) for the first reproducible
 structural reading of the two documents and the proposed pilot areas.
 The consolidated source-outline transition checklist is

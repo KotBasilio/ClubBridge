@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Case 3 — NS Gazilli: genuine duplicate collision</title><style>
+:root { color-scheme: light; --ink:#1e293b; --muted:#64748b; --line:#cbd5e1;
+  --paper:#f8fafc; --rtf:#fff7ed; --html:#eff6ff; --warn:#fff1f2; }
+* { box-sizing: border-box; }
+body { margin:0; color:var(--ink); background:#e2e8f0;
+  font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:1600px; margin:auto; padding:24px; background:white; min-height:100vh; }
+h1,h2,h3 { line-height:1.15; }
+a { color:#075985; }
+.lede,.note,.context,.prompt,.finding { border:1px solid var(--line); border-radius:10px;
+  padding:12px 14px; margin:12px 0; background:var(--paper); }
+.warning { background:var(--warn); border-color:#fda4af; }
+.meta { display:grid; grid-template-columns:max-content 1fr; gap:4px 12px; }
+.hash { font:12px/1.35 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap:anywhere; }
+.comparison { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:18px; align-items:start; }
+.pane { min-width:0; border:2px solid var(--line); border-radius:12px; padding:12px; overflow:auto; }
+.rtf { background:var(--rtf); border-color:#fdba74; }
+.html { background:var(--html); border-color:#93c5fd; }
+.label { text-transform:uppercase; letter-spacing:.08em; font-size:12px; font-weight:800; }
+.row-strip { display:grid; grid-template-columns:3.4em 1fr; gap:7px; margin:7px 0; align-items:stretch; }
+.row-id { font:12px ui-monospace,SFMono-Regular,Consolas,monospace; color:var(--muted); padding-top:8px; }
+.tokens { display:flex; flex-wrap:wrap; gap:5px; }
+.token { min-width:78px; max-width:100%; border:1px solid #d6a76d; border-radius:7px;
+  padding:7px; background:white; overflow-wrap:anywhere; white-space:pre-wrap; }
+.empty { color:var(--muted); font-style:italic; background:#f1f5f9; }
+.badge { display:inline-block; margin:0 5px 3px 0; border-radius:999px; padding:1px 6px;
+  background:#334155; color:white; font:11px ui-monospace,SFMono-Regular,Consolas,monospace; }
+.geometry { border-collapse:separate; border-spacing:3px; width:100%; table-layout:auto; }
+.geometry th,.geometry td { border:1px solid #60a5fa; border-radius:5px; padding:7px;
+  min-width:74px; background:white; vertical-align:top; overflow-wrap:anywhere; white-space:pre-wrap; }
+.geometry .empty { background:#e2e8f0; }
+.row-head { min-width:3.4em !important; color:var(--muted); font:12px ui-monospace,SFMono-Regular,Consolas,monospace; }
+.span { display:block; color:#1d4ed8; font:11px ui-monospace,SFMono-Regular,Consolas,monospace; }
+.context-grid,.four-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.choice { display:inline-block; border:1px solid #94a3b8; border-radius:999px; padding:4px 9px;
+  margin:3px 5px 3px 0; background:white; }
+.map { display:grid; grid-template-columns:1fr auto 1fr; gap:8px; align-items:center;
+  padding:7px; margin:7px 0; border:1px solid var(--line); border-radius:8px; }
+.arrow { color:var(--muted); font-weight:bold; }
+.legend { color:var(--muted); font-size:13px; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; }
+@media (max-width:900px) { .comparison,.context-grid,.four-grid { grid-template-columns:1fr; } }
+@media print { body { background:white; } main { max-width:none; padding:10px; }
+  .comparison { grid-template-columns:1fr 1fr; } a { color:inherit; } }
+</style></head>
+<body><main><p><a href="index.html">← Review-pack index</a></p>
+
+<h1>Case 3: NS Gazilli: genuine duplicate collision</h1>
+<div class="lede warning"><strong>Status entering review:</strong> ambiguous.
+Both RTF tables and both HTML tables have the same normalized structured
+content. Ordinal and heading are navigation context only, not match evidence.</div>
+
+<div class="meta">
+  <strong>RTF source</strong><span>ns25_09.rtf · rtf-table-0039, rtf-table-0044</span>
+  <strong>RTF SHA-256</strong><span class="hash">146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b</span>
+  <strong>HTML source</strong><span>ns25_09.htm · html-table-0042, html-table-0047</span>
+  <strong>HTML SHA-256</strong><span class="hash">b9c6be73a5023e25c349fb9aa9c331ecbb498caeaca90f7041a5c93c625797b7</span>
+</div>
+<section class="finding"><h2>The two possible one-to-one mappings</h2>
+<h3>Mapping A</h3>
+<div class="map"><code>rtf-table-0039</code><span class="arrow">↔</span><code>html-table-0042</code></div>
+<div class="map"><code>rtf-table-0044</code><span class="arrow">↔</span><code>html-table-0047</code></div>
+<h3>Mapping B</h3>
+<div class="map"><code>rtf-table-0039</code><span class="arrow">↔</span><code>html-table-0047</code></div>
+<div class="map"><code>rtf-table-0044</code><span class="arrow">↔</span><code>html-table-0042</code></div>
+<p><span class="choice">Mapping A</span><span class="choice">Mapping B</span>
+<span class="choice">Evidence insufficient</span></p></section>
+<p class="legend">All four diagrams deliberately retain their own identifiers.
+Identical T-numbers show identical ordered non-empty content; they do not imply
+a selected cross-source mapping.</p>
+<h2>RTF candidates</h2><div class="four-grid">
+<section class="pane rtf"><div class="label">RTF-derived flattened interpretation</div><h3>rtf-table-0039</h3><div class="row-strip"><div class="row-id">R01</div><div class="tokens"><div class="token"><span class="badge">T01</span>1♠ – 1БК 2♣ – ??</div><div class="token"><span class="badge">T02</span>2♦</div><div class="token"><span class="badge">T03</span>вопрос и ФГ односторонний, ответы натурально:</div></div></div><div class="row-strip"><div class="row-id">R02</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T04</span>2♥</div><div class="token"><span class="badge">T05</span>натур 5-4 мажоры</div></div></div><div class="row-strip"><div class="row-id">R03</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T06</span>2♠</div><div class="token"><span class="badge">T07</span>«пошутилки» 13-14 ~5332</div></div></div><div class="row-strip"><div class="row-id">R04</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T08</span>2БК</div><div class="token"><span class="badge">T09</span>15-16 равномер 5332 или 5422</div></div></div><div class="row-strip"><div class="row-id">R05</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T10</span>3м</div><div class="token"><span class="badge">T11</span>5ка и т. д.</div></div></div><div class="row-strip"><div class="row-id">R06</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T12</span>2БК</div><div class="token"><span class="badge">T13</span>миноры 5-4</div></div></div><div class="row-strip"><div class="row-id">R07</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T14</span>остальное</div><div class="token"><span class="badge">T15</span>не форс. ОТВ не имеет желания играть гейм</div></div></div></section><section class="pane rtf"><div class="label">RTF-derived flattened interpretation</div><h3>rtf-table-0044</h3><div class="row-strip"><div class="row-id">R01</div><div class="tokens"><div class="token"><span class="badge">T01</span>1♠ – 1БК 2♣ – ??</div><div class="token"><span class="badge">T02</span>2♦</div><div class="token"><span class="badge">T03</span>вопрос и ФГ односторонний, ответы натурально:</div></div></div><div class="row-strip"><div class="row-id">R02</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T04</span>2♥</div><div class="token"><span class="badge">T05</span>натур 5-4 мажоры</div></div></div><div class="row-strip"><div class="row-id">R03</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T06</span>2♠</div><div class="token"><span class="badge">T07</span>«пошутилки» 13-14 ~5332</div></div></div><div class="row-strip"><div class="row-id">R04</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T08</span>2БК</div><div class="token"><span class="badge">T09</span>15-16 равномер 5332 или 5422</div></div></div><div class="row-strip"><div class="row-id">R05</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T10</span>3м</div><div class="token"><span class="badge">T11</span>5ка и т. д.</div></div></div><div class="row-strip"><div class="row-id">R06</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T12</span>2БК</div><div class="token"><span class="badge">T13</span>миноры 5-4</div></div></div><div class="row-strip"><div class="row-id">R07</div><div class="tokens"><div class="token empty">∅ empty token</div><div class="token"><span class="badge">T14</span>остальное</div><div class="token"><span class="badge">T15</span>не форс. ОТВ не имеет желания играть гейм</div></div></div></section>
+</div><h2>HTML candidates</h2><div class="four-grid">
+<section class="pane html"><div class="label">HTML-exported geometry</div><h3>html-table-0042</h3><table class="geometry"><tbody><tr><th class="row-head">H01</th><td rowspan="7"><span class="badge">T01</span>1♠ – 1БК 2♣ – ??<span class="span">rowspan=7, colspan=1</span></td><td><span class="badge">T02</span>2♦</td><td colspan="2"><span class="badge">T03</span>вопрос и ФГ односторонний, ответы натурально:<span class="span">rowspan=1, colspan=2</span></td></tr><tr><th class="row-head">H02</th><td rowspan="4" class="empty">∅ empty physical cell<span class="span">rowspan=4, colspan=1</span></td><td><span class="badge">T04</span>2♥</td><td><span class="badge">T05</span>натур 5-4 мажоры</td></tr><tr><th class="row-head">H03</th><td><span class="badge">T06</span>2♠</td><td><span class="badge">T07</span>«пошутилки» 13-14 ~5332</td></tr><tr><th class="row-head">H04</th><td><span class="badge">T08</span>2БК</td><td><span class="badge">T09</span>15-16 равномер 5332 или 5422</td></tr><tr><th class="row-head">H05</th><td><span class="badge">T10</span>3м</td><td><span class="badge">T11</span>5ка и т. д.</td></tr><tr><th class="row-head">H06</th><td><span class="badge">T12</span>2БК</td><td colspan="2"><span class="badge">T13</span>миноры 5-4<span class="span">rowspan=1, colspan=2</span></td></tr><tr><th class="row-head">H07</th><td><span class="badge">T14</span>остальное</td><td colspan="2"><span class="badge">T15</span>не форс. ОТВ не имеет желания играть гейм<span class="span">rowspan=1, colspan=2</span></td></tr></tbody></table></section><section class="pane html"><div class="label">HTML-exported geometry</div><h3>html-table-0047</h3><table class="geometry"><tbody><tr><th class="row-head">H01</th><td rowspan="7"><span class="badge">T01</span>1♠ – 1БК 2♣ – ??<span class="span">rowspan=7, colspan=1</span></td><td><span class="badge">T02</span>2♦</td><td colspan="2"><span class="badge">T03</span>вопрос и ФГ односторонний, ответы натурально:<span class="span">rowspan=1, colspan=2</span></td></tr><tr><th class="row-head">H02</th><td rowspan="4" class="empty">∅ empty physical cell<span class="span">rowspan=4, colspan=1</span></td><td><span class="badge">T04</span>2♥</td><td><span class="badge">T05</span>натур 5-4 мажоры</td></tr><tr><th class="row-head">H03</th><td><span class="badge">T06</span>2♠</td><td><span class="badge">T07</span>«пошутилки» 13-14 ~5332</td></tr><tr><th class="row-head">H04</th><td><span class="badge">T08</span>2БК</td><td><span class="badge">T09</span>15-16 равномер 5332 или 5422</td></tr><tr><th class="row-head">H05</th><td><span class="badge">T10</span>3м</td><td><span class="badge">T11</span>5ка и т. д.</td></tr><tr><th class="row-head">H06</th><td><span class="badge">T12</span>2БК</td><td colspan="2"><span class="badge">T13</span>миноры 5-4<span class="span">rowspan=1, colspan=2</span></td></tr><tr><th class="row-head">H07</th><td><span class="badge">T14</span>остальное</td><td colspan="2"><span class="badge">T15</span>не форс. ОТВ не имеет желания играть гейм<span class="span">rowspan=1, colspan=2</span></td></tr></tbody></table></section>
+</div><h2>Disambiguating local context</h2><div class="context-grid">
+<section class="context"><h3>rtf-table-0039</h3><p><strong>Nearest heading:</strong> Газилли</p><p><strong>Immediately before:</strong></p><ul><li>3♣/♦/♥ - инвит на концентрации 3♠ - без синглетов, min</li><li>3♠ - просто инвит 3NT - без синглетов, max</li><li>Газилли</li></ul><p><strong>Immediately after:</strong></p><ul><li>Аналогично строится Газилли в «1♣-1♦-1♠-1NT-2♣»</li><li>Разбивка фита</li><li>ОТКР после 1♠-2♥/♠-?: Разбивка фита.</li></ul></section><section class="context"><h3>rtf-table-0044</h3><p><strong>Nearest heading:</strong> Газилли</p><p><strong>Immediately before:</strong></p><ul><li>3♣/♦/♥ - инвит на концентрации 3♠ - без синглетов, min</li><li>3♠ - просто инвит 3NT - без синглетов, max</li><li>Газилли</li></ul><p><strong>Immediately after:</strong></p><ul><li>TOC</li><li>Развитие 1NT 14-16</li><li>2♣ - 0.. интерес к мажорам garbage Stayman</li></ul></section>
+<section class="context"><h3>html-table-0042</h3><p><strong>Nearest heading:</strong> Газилли</p><p><strong>Immediately before:</strong></p><ul><li>html-table-0041: 1♠ – 1БК ?? / В заявку 1БК входят следующие типы рук: · все равномеры 6-12 РС · руки со своей мастью, которые слабее ФГ / 2♣ / либо 15+ любых, либо 13-14 ~5332 Газилли / 2♦ / 11-14 натурально / 2♥ / 11-14 натурально / 2♠ / 11-14 натурально </li></ul><p><strong>Immediately after:</strong></p><ul><li>html-table-0043: 1♠ – 2♥ 2♠ – ?? / Открывший отбрыкивается, но можно инвитнуть ещё раз. / 2NT / «что-то есть», готовит показ масти / 3♣ / послушать. На это – по уму. / 3♣/♦/♥ / синглет / 1♠ – 2♥/♠ 2NT – ?? / Открывший проявил интерес к сдаче, правда не пока</li></ul></section><section class="context"><h3>html-table-0047</h3><p><strong>Nearest heading:</strong> Газилли</p><p><strong>Immediately before:</strong></p><ul><li>html-table-0046: 1♠ – 1БК ?? / В заявку 1БК входят следующие типы рук: · все равномеры 6-12 РС · руки со своей мастью, которые слабее ФГ / 2♣ / либо 15+ любых, либо 13-14 ~5332 Газилли / 2♦ / 11-14 натурально / 2♥ / 11-14 натурально / 2♠ / 11-14 натурально </li></ul><p><strong>Immediately after:</strong></p><ul><li>html-table-0048: 1NT - 2§ 2¨ - ?? / у ОТКР нет мажорных четверок. На это: / 2© / мажоры от 4-4, слабая рука / эта секвенция позволяет спокойно применять Стейман при малой силе: имея 4-4 мажоры и слабую руку, ОТВ не бросает безнадёжные 1БК, а заявляет Стейма</li></ul></section>
+</div><section class="prompt"><h2>Archy's judgment</h2>
+<p>Choose <strong>Mapping A</strong>, <strong>Mapping B</strong>, or
+<strong>Evidence insufficient</strong>. If choosing a mapping, also state
+whether each pair has the same bidding meaning. Nothing is recorded automatically.</p></section>
+<footer class="note"><strong>Limitation:</strong> the right pane renders the
+Word-exported HTML geometry. It is not an independent rendering of the original
+Word/RTF document. The left pane is the current parser's flattened interpretation,
+not reconstructed merge geometry.</footer></main></body></html>

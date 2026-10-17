@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phase 2.5 — Table visual review pack</title><style>
+:root { color-scheme: light; --ink:#1e293b; --muted:#64748b; --line:#cbd5e1;
+  --paper:#f8fafc; --rtf:#fff7ed; --html:#eff6ff; --warn:#fff1f2; }
+* { box-sizing: border-box; }
+body { margin:0; color:var(--ink); background:#e2e8f0;
+  font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:1600px; margin:auto; padding:24px; background:white; min-height:100vh; }
+h1,h2,h3 { line-height:1.15; }
+a { color:#075985; }
+.lede,.note,.context,.prompt,.finding { border:1px solid var(--line); border-radius:10px;
+  padding:12px 14px; margin:12px 0; background:var(--paper); }
+.warning { background:var(--warn); border-color:#fda4af; }
+.meta { display:grid; grid-template-columns:max-content 1fr; gap:4px 12px; }
+.hash { font:12px/1.35 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap:anywhere; }
+.comparison { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:18px; align-items:start; }
+.pane { min-width:0; border:2px solid var(--line); border-radius:12px; padding:12px; overflow:auto; }
+.rtf { background:var(--rtf); border-color:#fdba74; }
+.html { background:var(--html); border-color:#93c5fd; }
+.label { text-transform:uppercase; letter-spacing:.08em; font-size:12px; font-weight:800; }
+.row-strip { display:grid; grid-template-columns:3.4em 1fr; gap:7px; margin:7px 0; align-items:stretch; }
+.row-id { font:12px ui-monospace,SFMono-Regular,Consolas,monospace; color:var(--muted); padding-top:8px; }
+.tokens { display:flex; flex-wrap:wrap; gap:5px; }
+.token { min-width:78px; max-width:100%; border:1px solid #d6a76d; border-radius:7px;
+  padding:7px; background:white; overflow-wrap:anywhere; white-space:pre-wrap; }
+.empty { color:var(--muted); font-style:italic; background:#f1f5f9; }
+.badge { display:inline-block; margin:0 5px 3px 0; border-radius:999px; padding:1px 6px;
+  background:#334155; color:white; font:11px ui-monospace,SFMono-Regular,Consolas,monospace; }
+.geometry { border-collapse:separate; border-spacing:3px; width:100%; table-layout:auto; }
+.geometry th,.geometry td { border:1px solid #60a5fa; border-radius:5px; padding:7px;
+  min-width:74px; background:white; vertical-align:top; overflow-wrap:anywhere; white-space:pre-wrap; }
+.geometry .empty { background:#e2e8f0; }
+.row-head { min-width:3.4em !important; color:var(--muted); font:12px ui-monospace,SFMono-Regular,Consolas,monospace; }
+.span { display:block; color:#1d4ed8; font:11px ui-monospace,SFMono-Regular,Consolas,monospace; }
+.context-grid,.four-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.choice { display:inline-block; border:1px solid #94a3b8; border-radius:999px; padding:4px 9px;
+  margin:3px 5px 3px 0; background:white; }
+.map { display:grid; grid-template-columns:1fr auto 1fr; gap:8px; align-items:center;
+  padding:7px; margin:7px 0; border:1px solid var(--line); border-radius:8px; }
+.arrow { color:var(--muted); font-weight:bold; }
+.legend { color:var(--muted); font-size:13px; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; }
+@media (max-width:900px) { .comparison,.context-grid,.four-grid { grid-template-columns:1fr; } }
+@media print { body { background:white; } main { max-width:none; padding:10px; }
+  .comparison { grid-template-columns:1fr 1fr; } a { color:inherit; } }
+</style></head>
+<body><main><p><a href="index.html">← Review-pack index</a></p>
+
+<h1>Phase 2.5 — Table visual review pack</h1>
+<div class="lede">Three diagnostic exceptions shown without changing matcher
+classifications or creating overrides. Open each case, compare the two source
+interpretations, and report the requested human judgment.</div>
+<ol><li><a href="case-1-ns-convention-card.html"><strong>Case 1:</strong> NS convention card: large structural divergence</a></li><li><a href="case-2-articles-gazilli.html"><strong>Case 2:</strong> Articles Gazilli: one-row structural divergence</a></li><li><a href="case-3-ns-duplicate-collision.html"><strong>Case 3:</strong> NS Gazilli: genuine duplicate collision</a></li></ol>
+<section class="note"><h2>How to read the diagrams</h2><ul>
+<li>The orange pane is the current RTF parser's row/token interpretation. It
+does not claim rowspan or colspan knowledge.</li>
+<li>The blue pane is clean geometry from Word-exported HTML. It uses real
+<code>rowspan</code> and <code>colspan</code> attributes, without Word CSS.</li>
+<li>Matching T-numbers identify the same ordered non-empty wording.</li>
+<li>Within-cell whitespace and line breaks are normalized exactly as in the
+matcher; wording, punctuation, and suit symbols are retained.</li>
+<li>These HTML files contain inline CSS only: no scripts, external resources,
+or network-dependent links.</li></ul></section>
+<footer class="note"><strong>Limitation:</strong> the right pane renders the
+Word-exported HTML geometry. It is not an independent rendering of the original
+Word/RTF document. The left pane is the current parser's flattened interpretation,
+not reconstructed merge geometry.</footer></main></body></html>

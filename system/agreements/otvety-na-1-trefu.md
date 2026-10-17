@@ -233,67 +233,66 @@ accept - что-то искусственное, форсинг
 
 ### Минорные неравномеры
 
-Развитие 2♠:
+<h3>Развитие 2♠:</h3>
 
 <table>
-  <tr>
-    <td rowspan="11"><code>1♣-1♦-2♠-??</code></td>
-    <td colspan="5">
-      ОТКР 17+, либо полуторацвет (5+м и =4М), либо миноры какие-то.<br>
-      У ОТВ есть и две слабые заявки, и ещё вопрос, считаем его ФГ.
-    </td>
-  </tr>
-
-  <tr>
-    <td><code>3♣</code></td>
-    <td colspan="4">Pass or correct</td>
-  </tr>
-
-  <tr>
-    <td><code>3♦</code></td>
-    <td colspan="4">«don’t want clubs», also nf</td>
-  </tr>
-
-  <tr>
-    <td rowspan="8"><code>2NT</code></td>
-    <td colspan="4">Relay and GF:</td>
-  </tr>
-
-  <tr>
-    <td rowspan="4"><code>3♣</code></td>
-    <td colspan="3">♣ with something</td>
-  </tr>
-
-  <tr>
-    <td rowspan="3"><code>3♦</code></td>
-    <td colspan="2">question</td>
-  </tr>
-
-  <tr>
-    <td><code>3♥/♠</code></td>
-    <td>nat</td>
-  </tr>
-
-  <tr>
-    <td><code>3NT</code></td>
-    <td>with ♦</td>
-  </tr>
-
-  <tr>
-    <td><code>3♦</code></td>
-    <td colspan="3">♦ with ♣</td>
-  </tr>
-
-  <tr>
-    <td><code>3♥/♠</code></td>
-    <td colspan="3">♦ with this major</td>
-  </tr>
-
-  <tr>
-    <td><code>3NT</code></td>
-    <td colspan="3">minors 5+5+</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Последовательность</th>
+      <th colspan="5">Описание</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="11"><code>1♣–1♦–2♠–??</code></td>
+      <td colspan="5">
+        ОТКР 17+, либо полуторацвет (5+м и =4М), либо миноры какие-то.<br>
+        У ОТВ есть и две слабые заявки, и ещё вопрос, считаем его ФГ.
+      </td>
+    </tr>
+    <tr>
+      <td><code>3♣</code></td>
+      <td colspan="4">Pass or correct</td>
+    </tr>
+    <tr>
+      <td><code>3♦</code></td>
+      <td colspan="4">«don’t want clubs», also nf</td>
+    </tr>
+    <tr>
+      <td rowspan="8"><code>2NT</code></td>
+      <td colspan="4">Relay and GF:</td>
+    </tr>
+    <tr>
+      <td rowspan="4"><code>3♣</code></td>
+      <td colspan="3">♣ with something</td>
+    </tr>
+    <tr>
+      <td rowspan="3"><code>3♦</code></td>
+      <td colspan="2">question</td>
+    </tr>
+    <tr>
+      <td><code>3♥/♠</code></td>
+      <td>nat</td>
+    </tr>
+    <tr>
+      <td><code>3NT</code></td>
+      <td>with ♦</td>
+    </tr>
+    <tr>
+      <td><code>3♦</code></td>
+      <td colspan="3">♦ with ♣</td>
+    </tr>
+    <tr>
+      <td><code>3♥/♠</code></td>
+      <td colspan="3">♦ with this major</td>
+    </tr>
+    <tr>
+      <td><code>3NT</code></td>
+      <td colspan="3">minors 5+5+</td>
+    </tr>
+  </tbody>
 </table>
+
 
 • В описании м+м видно аж три способа: либо «один с другим» (тут 5-4, 6-4), либо «оба сразу» (от 5-5);
 
@@ -387,15 +386,56 @@ o и т.п., см. двойной чек-бек.
 
 1♣ 1♥ 2♥ 2♠(поговорить)?? Cамый дальний ответ говорим, когда «нет новостей». Тут новости это дублет – просто дублет, не обязательно пустой: 3т – дублет;3б – тоже дублет, т.к. синглет – это ЧП, надо дать заявку выше 3ч (разберёмся, какую); 2бк - дублет пик. А «нет дублета» означает единственный расклад 4333 и поэтому он ставится дальше всего. Если ОТВ не спрашивает о дублете, значит ему самому есть, что показать – т.о. снова получился Антишуриг: [ОТВ] 2бк - синглет пик; 3тб - синглет натурально.
 
-```text
-1♣-1♥-2♥-?? | 2♠ | ДК, вопрос о дублете | 1♣-1♠-2♠-?? | 2NT | ДК, вопрос о дублете |
-| | 2NT - ♠ | | | |
-| | 3♣♦ - ♣♦ | | | 3♣♦♥ - ♣♦♥ |
-| | 3♥ - нет | | | 3♠ - нет |
-| | выше – синглет ♦ и кюбид | | | выше – синглет ♦ и кюбид |
-| 2NT | синглет ♠ | | | |
-| 3♣♦ | синглет | | 3♣♦♥ | синглет |
-```
+<h3>Развитие после фита</h3>
+
+<table style="display:inline-block; margin-right:20px;">
+  <thead>
+    <tr>
+      <th colspan="2">1♣–1♥–<br>2♥–??</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2♠</code></td>
+      <td>ДК, вопрос о дублете<br>
+          2NT – ♠<br>
+          3♣♦ – ♦<br>
+          3♥ – нет<br>
+          выше – синглет ♦ и кюбид
+      </td>
+    </tr>
+    <tr>
+      <td><code>2NT</code></td>
+      <td>синглет ♠</td>
+    </tr>
+    <tr>
+      <td><code>3♣♦</code></td>
+      <td>синглет</td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="display:inline-block;">
+  <thead>
+    <tr>
+      <th colspan="2">1♣–1♠–<br>2♠–??</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2NT</code></td>
+      <td>ДК, вопрос о дублете<br>
+          3♣♦♥ – ♣♦♥<br>
+          3♠ – нет<br>
+          выше – синглет ♦ и кюбид
+      </td>
+    </tr>
+    <tr>
+      <td><code>3♣♦♥</code></td>
+      <td>синглет</td>
+    </tr>
+  </tbody>
+</table>
 
 Эта же идея используется, когда в позиции двойного чек-бека ОТВ дал инвит на пятерке:
 

@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "status": "pilot-needs-human-review",
+  "generator": "system/migration/tools/build_geometry_pilots.py",
+  "summary": {
+    "strict": 2,
+    "human-reviewed": 1,
+    "competing-variant": 4,
+    "unresolved-fallback": 1
+  },
+  "outputs": [
+    {
+      "output": "strict-unmerged.md",
+      "generated_sha256": "85472b49c3079dff5bc3726538fd9f9fe542628619e90cc7f66503177e1afa3a",
+      "tables": [
+        {
+          "key": "strict-articles-0005",
+          "title": "Strict unmerged example — System ON",
+          "evidence_class": "strict",
+          "diagnostic_status": "matched",
+          "rendering": "gfm",
+          "pair": "Articles",
+          "rtf_source": "system/legacy/Articles_25_09.rtf",
+          "rtf_sha256": "8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054",
+          "rtf_table": "rtf-table-0005",
+          "rtf_source_start": 942308,
+          "rtf_source_end": 955330,
+          "html_source": "system/legacy/Articles_25_09.htm",
+          "html_sha256": "63028359317a08b80b2c38fb6c804e82c1a16749124fa54a98a8db67b14b7502",
+          "html_table": "html-table-0005",
+          "logical_columns": 3,
+          "warning": "Strict evidence still requires human review before promotion.",
+          "approval_record": null,
+          "variant_group": null,
+          "variant_label": null,
+          "geometry_cell_count": 12,
+          "fallback_token_count": 0
+        }
+      ]
+    },
+    {
+      "output": "strict-merged.md",
+      "generated_sha256": "9733a1fb0f8a3d8989332467e3f549b24ef4790dc503eda66df3a7d554003ebb",
+      "tables": [
+        {
+          "key": "strict-ns-0013",
+          "title": "Strict merged example — development after 1♣–1♦–2♠",
+          "evidence_class": "strict",
+          "diagnostic_status": "matched",
+          "rendering": "html",
+          "pair": "ns",
+          "rtf_source": "system/legacy/ns25_09.rtf",
+          "rtf_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+          "rtf_table": "rtf-table-0013",
+          "rtf_source_start": 2186852,
+          "rtf_source_end": 2222099,
+          "html_source": "system/legacy/ns25_09.htm",
+          "html_sha256": "b9c6be73a5023e25c349fb9aa9c331ecbb498caeaca90f7041a5c93c625797b7",
+          "html_table": "html-table-0013",
+          "logical_columns": 6,
+          "warning": "Strict evidence still requires human review before promotion.",
+          "approval_record": null,
+          "variant_group": null,
+          "variant_label": null,
+          "geometry_cell_count": 23,
+          "fallback_token_count": 0
+        }
+      ]
+    },
+    {
+      "output": "human-reviewed-gazilli.md",
+      "generated_sha256": "7e6b65d630a970b23f2ec6934bd72b18b214b40c6e6cc8bc5cc24780d1cee88c",
+      "tables": [
+        {
+          "key": "reviewed-articles-0019-0020",
+          "title": "Human-reviewed divergent example — rejected Gazilli",
+          "evidence_class": "human-reviewed",
+          "diagnostic_status": "divergent",
+          "rendering": "html",
+          "pair": "Articles",
+          "rtf_source": "system/legacy/Articles_25_09.rtf",
+          "rtf_sha256": "8416e9315db61c689b7be737a3b740577b47f91729e63137634d1592665e8054",
+          "rtf_table": "rtf-table-0019",
+          "rtf_source_start": 1381119,
+          "rtf_source_end": 1395544,
+          "html_source": "system/legacy/Articles_25_09.htm",
+          "html_sha256": "63028359317a08b80b2c38fb6c804e82c1a16749124fa54a98a8db67b14b7502",
+          "html_table": "html-table-0020",
+          "logical_columns": 4,
+          "warning": "Diagnostic status remains divergent; HTML geometry is used only under the source-hash-keyed human approval.",
+          "approval_record": "system/migration/pilots/visual-review/review.md#case-2--articles-gazilli",
+          "variant_group": null,
+          "variant_label": null,
+          "geometry_cell_count": 21,
+          "fallback_token_count": 0
+        }
+      ]
+    },
+    {
+      "output": "competing-gazilli-mapping-a.md",
+      "generated_sha256": "b73c9db05a49f0c1b521efc740c5693cedf8bd4f25a58405b2ffb6ede533c182",
+      "tables": [
+        {
+          "key": "gazilli-a-0039-0042",
+          "title": "Mapping A, pair 1",
+          "evidence_class": "competing-variant",
+          "diagnostic_status": "ambiguous",
+          "rendering": "html",
+          "pair": "ns",
+          "rtf_source": "system/legacy/ns25_09.rtf",
+          "rtf_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+          "rtf_table": "rtf-table-0039",
+          "rtf_source_start": 3402620,
+          "rtf_source_end": 3418092,
+          "html_source": "system/legacy/ns25_09.htm",
+          "html_sha256": "b9c6be73a5023e25c349fb9aa9c331ecbb498caeaca90f7041a5c93c625797b7",
+          "html_table": "html-table-0042",
+          "logical_columns": 4,
+          "warning": "Competing alternative only; no pairing has been selected or approved.",
+          "approval_record": null,
+          "variant_group": "ns-gazilli-duplicate-collision",
+          "variant_label": "A",
+          "geometry_cell_count": 16,
+          "fallback_token_count": 0
+        },
+        {
+          "key": "gazilli-a-0044-0047",
+          "title": "Mapping A, pair 2",
+          "evidence_class": "competing-variant",
+          "diagnostic_status": "ambiguous",
+          "rendering": "html",
+          "pair": "ns",
+          "rtf_source": "system/legacy/ns25_09.rtf",
+          "rtf_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+          "rtf_table": "rtf-table-0044",
+          "rtf_source_start": 3698810,
+          "rtf_source_end": 3714383,
+          "html_source": "system/legacy/ns25_09.htm",
+          "html_sha256": "b9c6be73a5023e25c349fb9aa9c331ecbb498caeaca90f7041a5c93c625797b7",
+          "html_table": "html-table-0047",
+          "logical_columns": 4,
+          "warning": "Competing alternative only; no pairing has been selected or approved.",
+          "approval_record": null,
+          "variant_group": "ns-gazilli-duplicate-collision",
+          "variant_label": "A",
+          "geometry_cell_count": 16,
+          "fallback_token_count": 0
+        }
+      ]
+    },
+    {
+      "output": "competing-gazilli-mapping-b.md",
+      "generated_sha256": "5b7ea0846992f3b835a15bb2fda78fc87ea93a1595d52a802b208c1ab449dd6e",
+      "tables": [
+        {
+          "key": "gazilli-b-0039-0047",
+          "title": "Mapping B, pair 1",
+          "evidence_class": "competing-variant",
+          "diagnostic_status": "ambiguous",
+          "rendering": "html",
+          "pair": "ns",
+          "rtf_source": "system/legacy/ns25_09.rtf",
+          "rtf_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+          "rtf_table": "rtf-table-0039",
+          "rtf_source_start": 3402620,
+          "rtf_source_end": 3418092,
+          "html_source": "system/legacy/ns25_09.htm",
+          "html_sha256": "b9c6be73a5023e25c349fb9aa9c331ecbb498caeaca90f7041a5c93c625797b7",
+          "html_table": "html-table-0047",
+          "logical_columns": 4,
+          "warning": "Competing alternative only; no pairing has been selected or approved.",
+          "approval_record": null,
+          "variant_group": "ns-gazilli-duplicate-collision",
+          "variant_label": "B",
+          "geometry_cell_count": 16,
+          "fallback_token_count": 0
+        },
+        {
+          "key": "gazilli-b-0044-0042",
+          "title": "Mapping B, pair 2",
+          "evidence_class": "competing-variant",
+          "diagnostic_status": "ambiguous",
+          "rendering": "html",
+          "pair": "ns",
+          "rtf_source": "system/legacy/ns25_09.rtf",
+          "rtf_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+          "rtf_table": "rtf-table-0044",
+          "rtf_source_start": 3698810,
+          "rtf_source_end": 3714383,
+          "html_source": "system/legacy/ns25_09.htm",
+          "html_sha256": "b9c6be73a5023e25c349fb9aa9c331ecbb498caeaca90f7041a5c93c625797b7",
+          "html_table": "html-table-0042",
+          "logical_columns": 4,
+          "warning": "Competing alternative only; no pairing has been selected or approved.",
+          "approval_record": null,
+          "variant_group": "ns-gazilli-duplicate-collision",
+          "variant_label": "B",
+          "geometry_cell_count": 16,
+          "fallback_token_count": 0
+        }
+      ]
+    },
+    {
+      "output": "unmatched-fallback.md",
+      "generated_sha256": "66f40e1d5509f4bf7b78000037efe2031e6926c6730bc0d594ee10bf824683cd",
+      "tables": [
+        {
+          "key": "fallback-ns-0003",
+          "title": "Unmatched fallback — forcing-pass scale",
+          "evidence_class": "unresolved-fallback",
+          "diagnostic_status": "unmatched",
+          "rendering": "rtf-token-list",
+          "pair": "ns",
+          "rtf_source": "system/legacy/ns25_09.rtf",
+          "rtf_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+          "rtf_table": "rtf-table-0003",
+          "rtf_source_start": 1378377,
+          "rtf_source_end": 1380348,
+          "html_source": null,
+          "html_sha256": null,
+          "html_table": null,
+          "logical_columns": null,
+          "warning": "No evidence-supported HTML counterpart exists; cell geometry is deliberately not inferred.",
+          "approval_record": null,
+          "variant_group": null,
+          "variant_label": null,
+          "geometry_cell_count": 0,
+          "fallback_token_count": 3
+        }
+      ]
+    }
+  ]
+}

@@ -60,6 +60,29 @@ agreement text. See
 [`pilots/html-table-probe-report.md`](pilots/html-table-probe-report.md) for
 the validation findings and the proposed dual-source boundary.
 
+## Geometry-Aware Pilot Generator
+
+`tools/build_geometry_pilots.py` produces a deliberately small set of
+review-only Markdown examples. RTF supplies wording and byte-offset provenance;
+HTML supplies geometry only for strict unique matches, explicitly approved
+hash-bound divergences, or clearly labeled competing alternatives. Unmatched
+tables receive a geometry-free RTF token fallback.
+
+Human geometry approvals live in [`geometry-approvals.json`](geometry-approvals.json)
+and are keyed by both source hashes and both table IDs. They authorize a review
+draft; they do not alter matcher diagnostics or promote an agreement.
+
+```sh
+python3 system/migration/tools/build_geometry_pilots.py \
+  --output-dir system/migration/pilots/geometry-aware
+python3 system/migration/tools/build_geometry_pilots.py \
+  --output-dir system/migration/pilots/geometry-aware --check
+```
+
+The explicit output directory is mandatory. The generator refuses the legacy
+and approved-agreement trees. See the checked-in
+[`geometry-aware/`](pilots/geometry-aware/README.md) sample and manifest.
+
 See [source-assessment.md](source-assessment.md) for the first reproducible
 structural reading of the two documents and the proposed pilot areas.
 The consolidated source-outline transition checklist is

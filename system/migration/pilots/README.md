@@ -53,4 +53,6 @@ Geometry-aware pilots remain review material even when their RTF↔HTML evidence
 is strict. Merged tables use minimal HTML only when alignment is demonstrated;
 simple rectangular tables may use GFM. Human-reviewed divergences retain that
 diagnostic label, and genuine ambiguity may be presented as multiple competing
-drafts. See the migration workspace guidance for the alternatives rule.
+drafts. The current limited sample, report, and manifest are in
+[`geometry-aware/`](geometry-aware/README.md). See the migration workspace
+guidance for the alternatives rule.

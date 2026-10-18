@@ -76,3 +76,17 @@ hashes, and review records are collected in
 
 Source documents have no automatic precedence over one another. Record any
 disagreement in [pending-updates/conflicts.md](pending-updates/conflicts.md).
+
+When a source structure permits several genuinely plausible conversions,
+review tooling may emit all useful alternatives. Each alternative must remain
+clearly labeled, traceable to its source hashes and table IDs, and outside
+`system/agreements/` until a human selects it. An unresolved alternative is not
+an agreement and must not be chosen by heading, ordinal, or apparent
+conventional wisdom.
+
+The migration target is the partnership system's meaning, not a facsimile of
+incidental Word formatting. Validated HTML geometry may clarify merged tables;
+after enough surrounding text is understood, a table may instead be redrawn
+for semantic clarity through an explicit review step.
+
+Completed migration tickets are retained in [`history/`](history/README.md).

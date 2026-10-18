@@ -46,3 +46,11 @@ python3 system/migration/tools/build_pilot_notes.py \
 Generated baselines remain migration evidence. Once promoted, agreement notes
 are intentionally detached from regeneration and may evolve through normal,
 reviewable Markdown edits.
+
+## Geometry-aware review drafts
+
+Geometry-aware pilots remain review material even when their RTF↔HTML evidence
+is strict. Merged tables use minimal HTML only when alignment is demonstrated;
+simple rectangular tables may use GFM. Human-reviewed divergences retain that
+diagnostic label, and genuine ambiguity may be presented as multiple competing
+drafts. See the migration workspace guidance for the alternatives rule.

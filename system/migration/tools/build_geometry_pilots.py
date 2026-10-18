@@ -76,6 +76,7 @@ class TableModel:
     cells: tuple[GeometryCell, ...]
     fallback_rows: tuple[tuple[RawCell, ...], ...]
     warning: str
+    geometry_adjustments: tuple[str, ...] = ()
     approval_record: str | None = None
     variant_group: str | None = None
     variant_label: str | None = None
@@ -278,6 +279,25 @@ def geometry_cells(
     return tuple(result)
 
 
+def omit_fully_empty_trailing_rows(table: dict) -> tuple[dict, int]:
+    """Omit unspanned blank bottom rows explicitly approved as meaningless."""
+
+    rows = list(table["rows"])
+    removed = 0
+    while rows and all(not normalize_cell_text(cell["text"]) for cell in rows[-1]):
+        final_index = len(rows) - 1
+        covered_from_above = any(
+            row_index + cell["rowspan"] - 1 >= final_index
+            for row_index, row in enumerate(rows[:-1])
+            for cell in row
+        )
+        if covered_from_above:
+            break
+        rows.pop()
+        removed += 1
+    return table | {"rows": rows}, removed
+
+
 def build_geometry_model(
     pair: dict[str, object],
     *,
@@ -303,6 +323,7 @@ def build_geometry_model(
     match = matches[rtf_id]
 
     approval_record = None
+    geometry_adjustments: tuple[str, ...] = ()
     if evidence_class == "strict":
         if match["status"] != "matched" or match["html_candidates"] != [html_id]:
             raise ValueError(f"{rtf_id} ↔ {html_id} is no longer a strict match")
@@ -313,6 +334,16 @@ def build_geometry_model(
             raise ValueError(f"{rtf_id} ↔ {html_id} is no longer divergent")
         approval = find_approval(approvals, pair, rtf_id, html_id)
         approval_record = str(approval["review_record"])
+        if "fully-empty-bottom-row" in approval.get("ignorable_geometry", []):
+            html_table, removed = omit_fully_empty_trailing_rows(html_table)
+            if removed == 0:
+                raise ValueError(
+                    "approved fully empty bottom row is no longer present"
+                )
+            geometry_adjustments = (
+                f"omitted {removed} fully empty trailing HTML row approved "
+                "as non-meaningful",
+            )
     elif evidence_class == "competing-variant":
         if match["status"] != "ambiguous" or html_id not in match["html_candidates"]:
             raise ValueError(f"{rtf_id} ↔ {html_id} is not an ambiguous candidate")
@@ -357,6 +388,7 @@ def build_geometry_model(
         cells=cells,
         fallback_rows=(),
         warning=warning,
+        geometry_adjustments=geometry_adjustments,
         approval_record=approval_record,
         variant_group=variant_group,
         variant_label=variant_label,
@@ -395,6 +427,7 @@ def build_fallback_model(
             "No evidence-supported HTML counterpart exists; cell geometry is "
             "deliberately not inferred."
         ),
+        geometry_adjustments=(),
     )
 
 
@@ -478,6 +511,8 @@ def provenance(model: TableModel) -> str:
         lines.append("- HTML geometry: deliberately absent")
     if model.approval_record:
         lines.append(f"- Human geometry approval: `{model.approval_record}`")
+    for adjustment in model.geometry_adjustments:
+        lines.append(f"- Reviewed geometry adjustment: {adjustment}")
     if model.variant_group:
         lines.append(
             f"- Competing set: `{model.variant_group}` · alternative "
@@ -662,6 +697,8 @@ and abstention from HTML geometry for an unmatched RTF table.
 
 - RTF supplies the displayed wording and byte-offset provenance.
 - HTML supplies only validated `rowspan`/`colspan` geometry.
+- The reviewed Gazilli draft omits its fully empty bottom HTML row, which Archy
+  explicitly judged non-meaningful; the manifest records that adjustment.
 - Competing drafts are alternatives, not agreements; neither mapping is chosen.
 - The fallback is a row/cell token list because its geometry is unresolved.
 - Minimal HTML contains no Word classes, styles, scripts, or `mso-*` baggage.

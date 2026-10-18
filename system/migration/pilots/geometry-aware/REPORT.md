@@ -22,6 +22,8 @@ and abstention from HTML geometry for an unmatched RTF table.
 
 - RTF supplies the displayed wording and byte-offset provenance.
 - HTML supplies only validated `rowspan`/`colspan` geometry.
+- The reviewed Gazilli draft omits its fully empty bottom HTML row, which Archy
+  explicitly judged non-meaningful; the manifest records that adjustment.
 - Competing drafts are alternatives, not agreements; neither mapping is chosen.
 - The fallback is a row/cell token list because its geometry is unresolved.
 - Minimal HTML contains no Word classes, styles, scripts, or `mso-*` baggage.

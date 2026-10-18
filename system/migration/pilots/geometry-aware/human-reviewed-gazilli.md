@@ -22,6 +22,7 @@ generated_by: system/migration/tools/build_geometry_pilots.py
 - HTML SHA-256: `63028359317a08b80b2c38fb6c804e82c1a16749124fa54a98a8db67b14b7502`
 - Rendering: `html` · logical columns: `4`
 - Human geometry approval: `system/migration/pilots/visual-review/review.md#case-2--articles-gazilli`
+- Reviewed geometry adjustment: omitted 1 fully empty trailing HTML row approved as non-meaningful
 
 <table>
   <tbody>
@@ -55,12 +56,6 @@ generated_by: system/migration/tools/build_geometry_pilots.py
     <tr>
       <td>3м</td>
       <td colspan="3">нат 6ка</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
     </tr>
   </tbody>
 </table>

@@ -88,8 +88,16 @@ class BuildGeometryPilotsTest(unittest.TestCase):
 
         self.assertEqual("human-reviewed", table["evidence_class"])
         self.assertEqual("divergent", table["diagnostic_status"])
+        self.assertEqual(
+            [
+                "omitted 1 fully empty trailing HTML row approved as "
+                "non-meaningful"
+            ],
+            table["geometry_adjustments"],
+        )
         self.assertIn("visual-review/review.md#case-2--articles-gazilli", text)
         self.assertIn("Односторонний ФГ", text)
+        self.assertEqual(7, text.count("<tr>"))
 
     def test_unmatched_table_abstains_from_geometry(self):
         text = self.outputs[Path("unmatched-fallback.md")]

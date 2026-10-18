@@ -30,6 +30,7 @@
           "html_table": "html-table-0005",
           "logical_columns": 3,
           "warning": "Strict evidence still requires human review before promotion.",
+          "geometry_adjustments": [],
           "approval_record": null,
           "variant_group": null,
           "variant_label": null,
@@ -59,6 +60,7 @@
           "html_table": "html-table-0013",
           "logical_columns": 6,
           "warning": "Strict evidence still requires human review before promotion.",
+          "geometry_adjustments": [],
           "approval_record": null,
           "variant_group": null,
           "variant_label": null,
@@ -69,7 +71,7 @@
     },
     {
       "output": "human-reviewed-gazilli.md",
-      "generated_sha256": "7e6b65d630a970b23f2ec6934bd72b18b214b40c6e6cc8bc5cc24780d1cee88c",
+      "generated_sha256": "83a5875596de14e7f5266c7026fb8eb70c3ec78382b0c0d0355c1c737d6e82ec",
       "tables": [
         {
           "key": "reviewed-articles-0019-0020",
@@ -88,10 +90,13 @@
           "html_table": "html-table-0020",
           "logical_columns": 4,
           "warning": "Diagnostic status remains divergent; HTML geometry is used only under the source-hash-keyed human approval.",
+          "geometry_adjustments": [
+            "omitted 1 fully empty trailing HTML row approved as non-meaningful"
+          ],
           "approval_record": "system/migration/pilots/visual-review/review.md#case-2--articles-gazilli",
           "variant_group": null,
           "variant_label": null,
-          "geometry_cell_count": 21,
+          "geometry_cell_count": 17,
           "fallback_token_count": 0
         }
       ]
@@ -117,6 +122,7 @@
           "html_table": "html-table-0042",
           "logical_columns": 4,
           "warning": "Competing alternative only; no pairing has been selected or approved.",
+          "geometry_adjustments": [],
           "approval_record": null,
           "variant_group": "ns-gazilli-duplicate-collision",
           "variant_label": "A",
@@ -140,6 +146,7 @@
           "html_table": "html-table-0047",
           "logical_columns": 4,
           "warning": "Competing alternative only; no pairing has been selected or approved.",
+          "geometry_adjustments": [],
           "approval_record": null,
           "variant_group": "ns-gazilli-duplicate-collision",
           "variant_label": "A",
@@ -169,6 +176,7 @@
           "html_table": "html-table-0047",
           "logical_columns": 4,
           "warning": "Competing alternative only; no pairing has been selected or approved.",
+          "geometry_adjustments": [],
           "approval_record": null,
           "variant_group": "ns-gazilli-duplicate-collision",
           "variant_label": "B",
@@ -192,6 +200,7 @@
           "html_table": "html-table-0042",
           "logical_columns": 4,
           "warning": "Competing alternative only; no pairing has been selected or approved.",
+          "geometry_adjustments": [],
           "approval_record": null,
           "variant_group": "ns-gazilli-duplicate-collision",
           "variant_label": "B",
@@ -221,6 +230,7 @@
           "html_table": null,
           "logical_columns": null,
           "warning": "No evidence-supported HTML counterpart exists; cell geometry is deliberately not inferred.",
+          "geometry_adjustments": [],
           "approval_record": null,
           "variant_group": null,
           "variant_label": null,

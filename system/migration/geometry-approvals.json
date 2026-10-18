@@ -11,6 +11,9 @@
       "html_table": "html-table-0005",
       "geometry_judgment": "equivalent",
       "meaning_judgment": "same",
+      "ignorable_geometry": [
+        "empty-perimeter-cells"
+      ],
       "reviewer": "Archy",
       "review_date": "2026-10-18",
       "review_record": "system/migration/pilots/visual-review/review.md#case-1--ns-convention-card"
@@ -25,6 +28,9 @@
       "html_table": "html-table-0020",
       "geometry_judgment": "equivalent",
       "meaning_judgment": "same",
+      "ignorable_geometry": [
+        "fully-empty-bottom-row"
+      ],
       "reviewer": "Archy",
       "review_date": "2026-10-18",
       "review_record": "system/migration/pilots/visual-review/review.md#case-2--articles-gazilli"

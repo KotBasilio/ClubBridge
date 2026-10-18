@@ -3,7 +3,7 @@
 Owner: ⏩🐝 Vel · Review: 👁️ Iris · Approval: 😺 Archy
 Working branch: `main` (sequential turn-scoped coordination)
 Baseline: `91316bbfa4843116f19536104f6991dae53ef87c`
-Status: ready
+Status: implemented; Iris review pending
 
 ## Goal
 Extend the conservative migration pipeline to generate **review-only Markdown pilots**

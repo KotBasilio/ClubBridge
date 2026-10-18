@@ -13,3 +13,4 @@ Completed tickets:
 - [`VEL-html-table-probe-ticket.md`](VEL-html-table-probe-ticket.md)
 - [`VEL-phase2-table-matcher-ticket.md`](VEL-phase2-table-matcher-ticket.md)
 - [`VEL-phase2-5-visual-review-ticket.md`](VEL-phase2-5-visual-review-ticket.md)
+- [`VEL-phase3-geometry-aware-pilots-ticket.md`](VEL-phase3-geometry-aware-pilots-ticket.md)

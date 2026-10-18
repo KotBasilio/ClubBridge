@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "decisions": [
+    {
+      "id": "forcing-pass-scale-diagram",
+      "source": "system/legacy/ns25_09.rtf",
+      "source_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+      "rtf_table": "rtf-table-0003",
+      "reviewer": "Archy",
+      "review_date": "2026-10-18",
+      "scope": "presentation-only",
+      "status": "approved",
+      "rendering": "centered-single-row-gfm",
+      "expected_cell_text": [
+        "ограниченная рука",
+        "ФП<br>────→",
+        "неопределённая рука"
+      ],
+      "note": "This is a small conceptual relationship diagram, not conventional tabular data. The RTF cell tokens and source meaning remain authoritative. Do not infer an HTML counterpart from this decision."
+    }
+  ]
+}

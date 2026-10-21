@@ -572,6 +572,20 @@ def build_argument_parser() -> argparse.ArgumentParser:
     return parser
 
 
+def check_section_outputs(
+    output_dir: Path, outputs: dict[Path, str]
+) -> list[Path]:
+    differences = check_outputs(output_dir, outputs)
+    expected = set(outputs)
+    if output_dir.exists():
+        differences.extend(
+            path
+            for path in output_dir.rglob("*")
+            if path.is_file() and path.relative_to(output_dir) not in expected
+        )
+    return sorted(set(differences))
+
+
 def main() -> int:
     parser = build_argument_parser()
     args = parser.parse_args()
@@ -586,7 +600,7 @@ def main() -> int:
     except ValueError as error:
         parser.error(str(error))
     if args.check:
-        differences = check_outputs(args.output_dir, outputs)
+        differences = check_section_outputs(args.output_dir, outputs)
         for path in differences:
             print(f"DIFFERS: {path}")
         return 1 if differences else 0

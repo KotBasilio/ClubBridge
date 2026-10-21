@@ -197,6 +197,20 @@ class BuildSectionDraftTest(unittest.TestCase):
             )
         self.assertEqual(approved_before, approved.read_bytes())
 
+    def test_check_reports_stale_alternative_without_deleting_it(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output_dir = Path(directory) / "draft"
+            section_draft.write_outputs(output_dir, self.outputs)
+            stale = output_dir / "draft-alternative-b.md"
+            stale.write_text("stale\n", encoding="utf-8")
+
+            differences = section_draft.check_section_outputs(
+                output_dir, self.outputs
+            )
+
+            self.assertEqual([stale], differences)
+            self.assertTrue(stale.exists())
+
     def test_output_guard_refuses_approved_tree(self):
         with self.assertRaises(ValueError):
             section_draft.validate_output_dir(

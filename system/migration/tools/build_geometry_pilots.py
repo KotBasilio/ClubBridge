@@ -450,7 +450,7 @@ def cells_by_row(model: TableModel) -> list[list[GeometryCell]]:
     return [sorted(rows[index], key=lambda cell: cell.column) for index in sorted(rows)]
 
 
-def render_gfm(model: TableModel) -> str:
+def render_gfm(model: TableModel, *, centered: bool = False) -> str:
     rows = cells_by_row(model)
     if not rows or any(len(row) != model.logical_columns for row in rows):
         raise ValueError("GFM table is not rectangular")
@@ -458,7 +458,10 @@ def render_gfm(model: TableModel) -> str:
         "| " + " | ".join(escape_text(cell.text, gfm=True) for cell in row) + " |"
         for row in rows
     ]
-    separator = "| " + " | ".join("---" for _ in range(model.logical_columns or 0)) + " |"
+    marker = ":---:" if centered else "---"
+    separator = "| " + " | ".join(
+        marker for _ in range(model.logical_columns or 0)
+    ) + " |"
     return "\n".join([rendered[0], separator, *rendered[1:]])
 
 

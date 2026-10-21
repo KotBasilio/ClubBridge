@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "migration-draft-needs-human-review",
+  "generator": "system/migration/tools/build_section_draft.py",
+  "source": {
+    "key": "ns",
+    "rtf_path": "system/legacy/ns25_09.rtf",
+    "rtf_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+    "html_path": "system/legacy/ns25_09.htm",
+    "html_sha256": "b9c6be73a5023e25c349fb9aa9c331ecbb498caeaca90f7041a5c93c625797b7"
+  },
+  "section": {
+    "heading": "Форспас",
+    "heading_occurrence": 1,
+    "source_byte_start": 1357818,
+    "source_byte_end": 1402388
+  },
+  "competing_variants": [],
+  "outputs": [
+    {
+      "output": "draft.md",
+      "generated_sha256": "2535803880bd96442326455895222e66cc41b1485844057a008fb01d1eeb809b",
+      "tables": [
+        {
+          "key": "ns-rtf-table-0003-forcing-pass-scale-diagram",
+          "title": "rtf-table-0003",
+          "evidence_class": "approved-presentation",
+          "diagnostic_status": "unmatched",
+          "rendering": "gfm-centered",
+          "pair": "ns",
+          "rtf_source": "system/legacy/ns25_09.rtf",
+          "rtf_sha256": "146d7c77baf0d1bf57af5df662ba7fa22543411e26d402b23bf99276fc48da8b",
+          "rtf_table": "rtf-table-0003",
+          "rtf_source_start": 1378377,
+          "rtf_source_end": 1380348,
+          "html_source": null,
+          "html_sha256": null,
+          "html_table": null,
+          "logical_columns": 3,
+          "warning": "Source-hash-keyed presentation decision; it does not assert an HTML match.",
+          "geometry_adjustments": [],
+          "approval_record": "system/migration/presentation-decisions.json#forcing-pass-scale-diagram",
+          "variant_group": null,
+          "variant_label": null,
+          "geometry_cell_count": 3,
+          "fallback_token_count": 0,
+          "presentation_override": "forcing-pass-scale-diagram"
+        }
+      ],
+      "warnings": [],
+      "unresolved_issues": []
+    }
+  ],
+  "promotion": {
+    "automatic": false,
+    "approved_tree": "system/agreements",
+    "requirement": "explicit human approval and separate provenance record"
+  }
+}

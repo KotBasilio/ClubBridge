@@ -113,3 +113,41 @@ after enough surrounding text is understood, a table may instead be redrawn
 for semantic clarity through an explicit review step.
 
 Completed migration tickets are retained in [`history/`](history/README.md).
+
+## Section-by-section Draft Runner
+
+`tools/build_section_draft.py` converts one exact outline section at a time.
+It preserves prose/table order and uses the same matcher and geometry models as
+the Phase 3 pilots. Strict unique matches may borrow HTML geometry; reviewed
+divergences require a current hash-keyed approval; ambiguous matches produce
+named alternative drafts; other tables retain explicit RTF-token fallbacks.
+Hash-keyed semantic presentation decisions live in
+[`presentation-decisions.json`](presentation-decisions.json).
+
+Create or deterministically check a staged review draft from the repository
+root:
+
+```sh
+python3 system/migration/tools/build_section_draft.py \
+  --source ns \
+  --section 'Форспас' \
+  --output-dir system/migration/drafts/ns-forcing-pass
+python3 system/migration/tools/build_section_draft.py \
+  --source ns \
+  --section 'Форспас' \
+  --output-dir system/migration/drafts/ns-forcing-pass \
+  --check
+```
+
+Valid source keys are `Articles` and `ns`. Headings are exact and section
+boundaries stop at the next peer or ancestor outline heading; page numbers are
+not boundaries. If an exact heading is duplicated, the command stops and lists
+source byte offsets. Rerun with the displayed one-based
+`--heading-occurrence N` selector.
+
+Every output directory contains one draft (or clearly named competing drafts),
+`manifest.json`, and `REVIEW.md`. The manifest records source and generated
+hashes, byte range, table classifications, presentation overrides, warnings,
+and unresolved issues. The runner refuses `system/legacy/` and
+`system/agreements/`: approval and promotion remain a separate human-authorized
+edit and provenance commit, detached from future regeneration.

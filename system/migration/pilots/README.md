@@ -56,3 +56,10 @@ diagnostic label, and genuine ambiguity may be presented as multiple competing
 drafts. The current limited sample, report, and manifest are in
 [`geometry-aware/`](geometry-aware/README.md). See the migration workspace
 guidance for the alternatives rule.
+
+## Section-workflow demonstration
+
+[`section-workflow-demo/`](section-workflow-demo/REVIEW.md) is the first
+deterministic section-runner example. It stages the narrow `ns` section
+`Форспас`, including Archy's hash-keyed semantic-diagram presentation decision,
+without promoting the draft into the approved agreements.
